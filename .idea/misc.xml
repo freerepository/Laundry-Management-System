@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable-v24/btn4gray.xml" value="0.1575" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable-v24/et_black_bg.xml" value="0.1865" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/backgnd.xml" value="0.275" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/bg_corner8.xml" value="0.2445" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/bg_dialog.xml" value="0.2445" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/bg_white.xml" value="0.2445" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/btn1.xml" value="0.2445" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/btn2.xml" value="0.2445" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/btn3.xml" value="0.274" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/button_blue_bg.xml" value="0.2445" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/button_orange_bg.xml" value="0.2445" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/semi_transparent.xml" value="0.1805" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/semi_transparent80.xml" value="0.1805" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/shape.xml" value="0.2235" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/shape1.xml" value="0.2235" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/shape_circle.xml" value="0.176" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/shape_circle1.xml" value="0.2235" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/shape_circle_dialog_edit_border.xml" value="0.1175" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/shape_outline.xml" value="0.2235" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/shape_outline_dark.xml" value="0.2775" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/drawable/shape_white.xml" value="0.2235" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bedroll_return_add_stock.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bedroll_returnt_view_stock.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bedroll_returnto_laundryt_from_buffer_stock.xml" value="0.26875" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bedroll_stock_view.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bedroll_stock_view_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bedroll_stocking.xml" value="0.2808988764044944" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bedroll_stocking_add.xml" value="0.17253521126760563" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bfresh_bedroll_receipt_from_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_bsoiled_bedroll_returnto_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_buffer_receipt_from_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_buffer_stock_issue_add_depot.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_buffer_stock_issue_depot.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_capture_signature.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_condemned_bed_roll.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_condemned_bedroll_add.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_condemnet_bsr_depot.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_condemnet_bsr_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_deport_dashboard.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_depot_panalty_add_screen.xml" value="0.25" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_depot_panalty_screen.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_depot_penalty_view_screen.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_fresh_bed_roll_update_activty.xml" value="0.25" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_fresh_bedroll_add_supply_depot.xml" value="0.25" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_fresh_bedroll_receip_view_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_fresh_bedroll_supply_to_train.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_intro_slider.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_laundry_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_laundry_penltry_screen.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_laundry_penlty_add_screen.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_laundry_view_screen.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_main.xml" value="0.26875" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_officer_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_penalty.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_penalty_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_receive_returned_buffer_from_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_received_from_train.xml" value="0.2682051282051282" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_received_from_train_testing_kliye.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_send_to_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_ssedashboard.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_sselogin.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_store_dashboard.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_supervisor_dashboard.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_supply_condemned_sbslist.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_supply_condemned_sbslist_depot.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_supply_condemnet_bed_sheet_add_depot.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_supply_condemnet_bed_sheet_update_depot.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_test.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_test_check.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_test_check_add_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_test_check_depot.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_test_check_depot_update.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_test_check_laundry_update.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/activity_update_supply_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/condemnedbedroll_item.xml" value="0.21" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/content_intro_slider.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/content_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/dialog_confirmation.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_add_received.xml" value="0.5" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_add_received2.xml" value="0.26875" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_buffer_laundry.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_edit_received.xml" value="0.25462962962962965" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_edit_received2.xml" value="0.25" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_edit_received_2_update.xml" value="0.25" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_update_delivery.xml" value="0.33" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fragment_first.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fragment_model.xml" value="0.5" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fragment_model2.xml" value="0.5" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fragment_model3.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fragment_second.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fragment_three.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fresh_bedroll_received_from_depot.xml" value="0.2638888888888889" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fresh_bedroll_supply_depot.xml" value="0.26875" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_add_bedroll_stocking.xml" value="0.26875" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_bedroll_view_stocking.xml" value="0.26875" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_bedroll_view_stocking_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_condemation_bedroll.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_condemnt_bedroll.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_condemnt_bedroll2.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_fresh_bedroll.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_received_bedroll_stocking.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_soiled_bedroll_view_stocking.xml" value="0.26871794871794874" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_task_type.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/item_task_type_deport.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/my_item.xml" value="0.26875" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/panalty_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/panalty_item_.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/panalty_item_s.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/penalty_view.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/recieved_from_tain_item.xml" value="0.33" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_add_laundry_list.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_add_received_list.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_add_supply_list.xml" value="0.5" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_add_supply_list2.xml" value="0.5" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_buffer_list.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_buffer_received_laundry.xml" value="0.2490740740740741" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_fresh_supply_list.xml" value="0.27291666666666664" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_rama_received_list.xml" value="0.2682051282051282" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_receiced_from_store_list.xml" value="0.67" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_supply_condemnet_bslist.xml" value="0.25" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/spinner_selected_item.xml" value="0.27291666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

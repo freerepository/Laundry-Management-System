@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaundryActivity.PenaltyScreens.LaundryPenltryScreenActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/v_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/back"
+            app:tint="@color/colorWhite" />
+
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/droid_serif"
+            android:gravity="center"
+            android:text="Penalty"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/v_add_buffer"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_add_user"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:layout_marginTop="4dp"
+        android:layout_margin="6dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/supOfficer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/calendar_icon"
+                android:backgroundTint="@color/colorAccent" />
+            <EditText
+                android:id="@+id/et_date_from"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:backgroundTint="@color/hint_color"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/black"
+                android:focusable="false"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="sans-serif"
+                android:hint="From Date"
+                android:maxLines="1"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/train_no_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/calendar_icon"
+                android:backgroundTint="@color/colorAccent" />
+            <EditText
+                android:id="@+id/et_date_to"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:backgroundTint="@color/hint_color"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:focusable="false"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="sans-serif"
+                android:hint="To Date"
+                android:maxLines="1"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/cardview"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorAccent"
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="SN"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="Date"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:paddingRight="2dp"
+                    android:text="Remarks"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="Amount"
+                    android:visibility="gone"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:text="View"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/srl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_layout"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/panltyListRecyvlerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    tools:listitem="@layout/panalty_item_" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+            <TextView
+                android:id="@+id/tv_empty_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Data not found"
+                android:visibility="visible"
+                android:textColor="@color/colorHint"
+                android:textSize="15dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:background="@color/colorBlueDark">
+
+            <TextView
+                android:id="@+id/tv_total_penality_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="visible"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="Total:"
+                android:textAppearance="@android:style/TextAppearance.Large"/>
+
+            <Button
+                android:id="@+id/btn_next_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:text="NEXT"
+                android:background="@color/colorBlue1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

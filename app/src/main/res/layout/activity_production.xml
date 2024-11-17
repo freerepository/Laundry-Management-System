@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LaundryActivity.ProductionActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="@dimen/_8sdp">
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_4sdp"
+                app:tint="@android:color/white"
+                android:src="@drawable/back"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/_4sdp"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Production"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:background="@drawable/shape_circle"
+            app:layout_constraintTop_toBottomOf="@+id/rv">
+
+            <Spinner
+                android:id="@+id/sp_shed_name"
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:hint=""
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_circle"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+            <Spinner
+                android:id="@+id/sp_work_type"
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:hint=""
+                android:textSize="14dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="Bed Sheets"
+                    android:textColor="@color/black"
+                    app:tint="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/et_bed_sheets"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+                    android:layout_marginRight="12dp"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_circle"
+                    android:textColorHint="@color/colorHint"
+                    android:hint="Enter Bed Sheets"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="Pillow Cover"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/black"
+                    app:tint="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/et_pillow_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_circle"
+                    android:textColorHint="@color/colorHint"
+                    android:hint="Enter Pillow Cove"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="Face Towel"
+                    android:textColor="@color/black"
+                    app:tint="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/et_face_towel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+                    android:layout_marginRight="12dp"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_circle"
+                    android:textColorHint="@color/colorHint"
+                    android:hint="Enter Face Towel"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="Blanket"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/black"
+                    app:tint="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/et_blanket"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_circle"
+                    android:textColorHint="@color/colorHint"
+                    android:hint="Enter blanket"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="Total Packets"
+                    android:textColor="@color/black"
+                    app:tint="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/et_face_towel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+                    android:layout_marginRight="12dp"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_circle"
+                    android:textColorHint="@color/colorHint"
+                    android:hint="Enter Total Packets"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="Total Blankets"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/black"
+                    app:tint="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/et_blanket"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_circle"
+                    android:textColorHint="@color/colorHint"
+                    android:hint="Enter Total Blankets"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/v_save"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/bg_corner8"
+                android:backgroundTint="@color/colorRed"
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/droid_serif"
+                android:layout_gravity="center"
+                android:text="Submit"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

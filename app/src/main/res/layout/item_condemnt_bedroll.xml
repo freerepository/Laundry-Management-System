@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:minHeight="48dp"
+    android:gravity="center_vertical"
+    android:paddingVertical="2dp"
+    android:padding="4dp"
+    android:layout_margin="2dp"
+    android:orientation="horizontal"
+    android:background="@color/colorBackground">
+    <TextView
+        android:id="@+id/tv_index_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:textSize="13dp"
+        android:layout_margin="4dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@android:color/black"
+        android:text="1"/>
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:textSize="13dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@android:color/black"
+        android:text="date"/>
+    <TextView
+        android:id="@+id/tv_laundry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:textSize="12dp"
+
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@android:color/black"
+        android:text="kyq"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:textSize="13dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@android:color/black"
+        android:text="stauts"/>
+
+
+
+    <TextView
+        android:id="@+id/iv_view"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="3"
+        android:text="View"
+       android:textStyle="bold"
+        android:textColor="@color/colorGreen"
+        android:gravity="center"
+        android:layout_margin="3dp"/>
+<!--        android:src="@drawable/icon_view"-->
+
+    <TextView
+        android:id="@+id/iv_varify"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:layout_margin="3dp"
+        android:text="Verify"
+        android:src="@drawable/yes1"
+        />
+
+</LinearLayout>

@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LaundryActivity.FreshBedrollSupplytoAddDepot"
+    android:gravity="center">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:background="@color/colorAccent">
+        <ImageView
+            android:id="@+id/v_negative"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            app:tint="@android:color/white"
+            android:src="@drawable/back"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/addImg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="Add Laundry Supply to Depot"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/rv">
+
+                <LinearLayout
+                    android:id="@+id/layou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlv2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape">
+
+                        <EditText
+                            android:id="@+id/et_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="25sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:background="@null"
+                            android:backgroundTint="@color/hint_color"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="sans-serif"
+                            android:hint="Select Date"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="15dp" />
+                        <ImageView
+                            android:id="@+id/ic_calender"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            app:tint="@color/colorAccent"
+                            android:src="@drawable/calendar_icon"
+                            android:padding="4dp"/>
+
+                    </RelativeLayout>
+            </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/dev1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:background="@drawable/shape"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+                <Spinner
+                    android:id="@+id/sp_depot"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp"
+                    android:spinnerMode="dropdown"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+                <Spinner
+                    android:id="@+id/sp_select_train"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:minHeight="@dimen/_36sdp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="12dp"
+                    android:spinnerMode="dropdown"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:background="@drawable/shape"
+                    />
+                <Spinner
+                    android:id="@+id/sp_select_coach"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:minHeight="@dimen/_36sdp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="0dp"
+                    android:spinnerMode="dropdown"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+                <LinearLayout
+                    android:id="@+id/layout4_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:id="@+id/layout5_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:text="Number of Bags "
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/et_no_of_bag"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape"
+                        android:gravity="center"
+                        android:hint="number of bags"
+                        android:layout_marginRight="12dp"
+                        android:inputType="number"
+
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/txt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="Bed Sheet"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:tint="@color/colorWhite" />
+
+                    <EditText
+                        android:id="@+id/et_bed_sheet"
+                        android:layout_width="match_parent"
+                        android:layout_height="32sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape"
+                        android:gravity="center"
+                        android:hint="bed sheet"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:id="@+id/layout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:text="Pillow"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_pillow"
+                        android:layout_width="match_parent"
+                        android:layout_height="32sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:inputType="number"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/shape"
+                        android:textColorHint="@color/colorHint"
+                        android:hint="Pillow"
+                        android:textColor="@android:color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:text="Pillow Cover"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_pillow_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape"
+                        android:gravity="center"
+                        android:hint="pillow cover"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+                <LinearLayout
+                    android:id="@+id/layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:id="@+id/layout6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txt4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:text="Blanket"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_blanket"
+                        android:layout_width="match_parent"
+                        android:layout_height="32sp"
+                        android:layout_centerVertical="true"
+                        android:inputType="number"
+                        android:layout_marginRight="12dp"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/shape"
+                        android:textColorHint="@color/colorHint"
+                        android:hint="blankets"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+<!--               idhar dalana hai -->
+
+<!--               idhar dalana hai -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txt5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:text="Blanket Cover"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_blanket_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="32sp"
+                        android:layout_centerVertical="true"
+                        android:inputType="number"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/shape"
+                        android:textColorHint="@color/colorHint"
+                        android:hint="blanket cover"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                -->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/_16sdp"-->
+<!--                android:layout_marginTop="@dimen/_1sdp"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/ll_uid">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_weight="1">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txt6"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginVertical="@dimen/_8sdp"-->
+<!--                        android:text="Blanket Cover"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="15sp"-->
+<!--                        app:tint="@color/colorWhite" />-->
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_blanket_cover"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="32sp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:inputType="number"-->
+<!--                        android:layout_marginRight="12dp"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:background="@drawable/shape"-->
+<!--                        android:textColorHint="@color/colorHint"-->
+<!--                        android:hint="blanket cover"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_weight="1">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txt7"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginVertical="@dimen/_8sdp"-->
+<!--                        android:text="Bath Towel"-->
+
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="15sp"-->
+<!--                        app:tint="@color/colorWhite" />-->
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_bath_towel"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="32sp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:inputType="number"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:background="@drawable/shape"-->
+<!--                        android:textColorHint="@color/colorHint"-->
+<!--                        android:hint="bath towel"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+
+<!--           idhar dalana hai or ye     -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/txt8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="Hand Towel"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        app:tint="@color/colorWhite"/>
+                    <EditText
+                        android:id="@+id/et_face_towel"
+                        android:layout_width="match_parent"
+                        android:layout_height="32sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/shape"
+                        android:gravity="center"
+                        android:hint="hand towel"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:id="@+id/layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txt9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:text="Total Packets"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            app:tint="@color/colorWhite"/>
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_total_packets"
+                        android:layout_width="match_parent"
+                        android:layout_height="32sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/shape"
+                        android:gravity="center"
+                        android:hint="total packets"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/txt10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="Remark:"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        app:tint="@color/colorWhite"/>
+                    <EditText
+                        android:id="@+id/et_remark"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50sp"
+                        android:gravity="top|left"
+                        android:inputType="textEmailAddress|textMultiLine"
+                        android:lines="20"
+                        android:hint="Write something...."
+                        android:minLines="5"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/colorHint"
+                        android:textColor="@android:color/black"
+                        android:background="@drawable/shape"
+                        android:scrollHorizontally="false"
+                        android:scrollbars="vertical" />
+                    />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/v_positives"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:background="@drawable/btn2"
+                    android:gravity="center"
+                    android:elevation="@dimen/_2sdp"
+                    android:fontFamily="@font/droid_serif"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:text="Save"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

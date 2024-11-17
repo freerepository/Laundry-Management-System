@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LaundryManagement"
+        tools:targetApi="31">
+        <activity
+            android:name=".DeleteTestTemp.TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.PanaltyUpdateScreen.DepotPenaltyViewScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.PenaltyScreens.LaundryViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.PenaltyScreens.LaundryPenltyAddScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.PenaltyScreens.LaundryPenltryScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.Updating.Laundry_PanaltyScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.Updating.Laundry_PanaltyAddScreen"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.PanaltyUpdateScreen.Depot_PanaltyAddScreen"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DeportActivity.PanaltyUpdateScreen.Depot_PanaltyScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.Updating.BedrollStockViewItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.Updating.FreshBedRollUpdateActivty"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.ReceiveReturnedBufferFromLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.BedrollReturntViewStockActivity"
+            android:exported="false" />
+        <activity android:name=".DeportActivity.BedrollReturnAddStockActvity" />
+        <activity
+            android:name=".DeportActivity.BedrollReturntoLaundrytFromBufferStockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.BSoiledBedrollReturntoLaundryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.BFreshBedrollReceiptFromLaundryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.BufferReceiptFromLaundryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.PenaltyModuleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.BufferStockIssueAddDepot"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.FreshBedrollReceipViewLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.BedrollStockViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.BedrollStockingAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.IntroSliderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemGiventoDepotUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SentCBStoStoreUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SupplyCondemnetBedSheetUpdateDepot"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.TestCheckDepotUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.TestCheckDepotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.TestCheckLaundryUpdate"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.BufferStockIssuetoDepot"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.PenaltyLaundryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.TakeCameraLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.TestCheckLaundryAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemReceivedFromOtherPlaceListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemReceivedFromOtherPlaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemReceivedFromGSDDepotListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemReceivedFromGSDDepotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.ReceivedCBSFromLaundry"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".DeportActivity.CBSReceivedFromstoreList" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".StoreActivity.ItemGiventoDepotListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemGiventoDepotAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemReceivedFromDepotListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SentCBStoStoreListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SentCBStoStoreAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SentCBStoStoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SupplyCondemnedSBSListDepot"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SupplyCondemnetBedSheetAddDepot"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.SupplyCondemnetBedSheetUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SupplyCondemneBedSheetDepot"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.CBSReceivedFromstore"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.LaundrySupplyUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.FreshBedrollSupplytoAddDepot"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.QrCodeDepotActivity"
+            android:exported="false" />
+        <activity android:name=".LaundryActivity.CaptureAct" />
+        <activity
+            android:name=".LaundryActivity.QrCodeScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.SupplyCondemnedSBSListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.CondemnedBedrollAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.ReceivedStoreListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.CondemnedBedrollActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.FreshBedrollReceiptfromLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.CondemnetBsrDepotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.CondemnetBsrLaundryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemReceivedFromDepotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemGiventoDepotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemReceivedFromOtherPlacesAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.ItemReceivedFromGSDDepotAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity.StoreDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".SSEActvity.SSELoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SSEActvity.SSEDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".SupervisorActivity.SupervisorDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.TakeCameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.TestCheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CaptureSignatureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.PenaltyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.ProductionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.BedrollStocking"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.FreshBedrollSupplytoDepot"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.ReceivedFronLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.BFreshBedrollSupplytoTrainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.ReceivedFromTrainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.SendToLaundryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SupervisorActivity.SupervisorLogin"
+            android:exported="false" />
+        <activity
+            android:name=".OfficerActivity.OfficerLogin"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryActivity.LaundryDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".DeportActivity.DeportDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".ReceivedFromTrainActivity_testing_K_Liye"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.LoginActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovider" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorHint"
+    android:gravity="center">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_corner8"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:elevation="@dimen/_8sdp"
+            android:layout_margin="@dimen/_25sdp">
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00BCD4"
+                android:paddingVertical="@dimen/_4sdp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text=" Edit Received from Train"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_circle"
+                app:layout_constraintTop_toBottomOf="@+id/rv">
+
+                <EditText
+                    android:id="@+id/et_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="Select Date"
+                    android:inputType="date"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/black_overlay"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_calender"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    app:tint="@color/black"
+                    android:src="@drawable/icon_calendar"
+                    android:padding="4dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_circle"
+                app:layout_constraintTop_toBottomOf="@+id/rv">
+
+                <EditText
+                    android:id="@+id/et_laundry"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:inputType="textFilter"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/black_overlay"
+                    android:hint="Select Laundry"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+                <EditText
+                    android:id="@+id/et_select_train"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_circle"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="4dp"
+                    android:textColorHint="@color/black_overlay"
+                    android:hint="Select Train"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"/>
+                <EditText
+                    android:id="@+id/et_select_coach"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_circle"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:textColorHint="@color/black_overlay"
+                    android:hint="Select Coach"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="No of Bag"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:tint="@color/colorWhite" />
+                    <EditText
+                        android:id="@+id/et_no_of_bag"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:inputType="number"
+                        android:layout_marginRight="12dp"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/shape_circle"
+                        android:textColorHint="@color/colorHint"
+                        android:hint="No of Bag"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:id="@+id/layout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:layout_marginStart="4dp"
+                            android:text="Bed Sheet"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_bed_sheet"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/shape_circle"
+                        android:gravity="center"
+                        android:hint="bed sheet"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+
+                <LinearLayout
+                    android:id="@+id/layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:id="@+id/layout6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:text="Pillow Cover"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_pillow_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_circle"
+                        android:gravity="center"
+                        android:hint="pillow cover"
+                        android:layout_marginRight="12dp"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="10sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:layout_marginStart="4dp"
+                            android:text="Face Towel"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_face_towel"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/shape_circle"
+                        android:gravity="center"
+                        android:hint="face towel"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="Blanket Cover"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:tint="@color/colorWhite" />
+                    <EditText
+                        android:id="@+id/et_blanket_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:inputType="number"
+                        android:layout_marginRight="12dp"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/shape_circle"
+                        android:textColorHint="@color/colorHint"
+                        android:hint="blanket cover"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="Bath Towel"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:tint="@color/colorWhite" />
+                    <EditText
+                        android:id="@+id/et_bath_towel"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:inputType="number"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/shape_circle"
+                        android:textColorHint="@color/colorHint"
+                        android:hint="bath towel"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="Blankets"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        app:tint="@color/colorWhite"/>
+                    <EditText
+                        android:id="@+id/et_blanket"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:inputType="number"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/shape_circle"
+                        android:textColorHint="@color/colorHint"
+                        android:hint="blankets"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:id="@+id/layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_8sdp"
+                            android:text="Total Packets"
+                            android:textSize="10sp"
+                            android:textColor="@color/black"
+                            app:tint="@color/colorWhite"/>
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_total_packet"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/shape_circle"
+                        android:gravity="center"
+                        android:hint="total packets"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="Unused Packets"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        app:tint="@color/colorWhite"/>
+                    <EditText
+                        android:id="@+id/et_unused_packets"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:inputType="number"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/shape_circle"
+                        android:textColorHint="@color/colorHint"
+                        android:hint="Unused Packets"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:text="Remark:"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        app:tint="@color/colorWhite"/>
+                    <EditText
+                        android:id="@+id/et_remark"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50sp"
+                        android:gravity="top|left"
+                        android:inputType="textEmailAddress|textMultiLine"
+                        android:lines="20"
+                        android:hint="Write something...."
+                        android:minLines="5"
+                        android:textSize="10sp"
+                        android:textColorHint="@color/colorHint"
+                        android:textColor="@android:color/black"
+                        android:background="@drawable/shape_circle"
+                        android:scrollHorizontally="false"
+                        android:scrollbars="vertical" />
+                    />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/v_negative"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:background="@drawable/bg_corner8"
+                    android:gravity="center"
+                    android:elevation="@dimen/_2sdp"
+                    android:fontFamily="@font/droid_serif"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:textColor="@android:color/white"
+                    android:text="Cancel"/>
+                <TextView
+                    android:id="@+id/v_positive"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:background="@drawable/bg_corner8"
+                    android:gravity="center"
+                    android:elevation="@dimen/_2sdp"
+                    android:fontFamily="@font/droid_serif"
+                    android:backgroundTint="@color/colorGreen"
+                    android:textColor="@android:color/white"
+                    android:text="Save"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

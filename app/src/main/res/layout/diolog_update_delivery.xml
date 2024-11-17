@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_dialog_bg"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_corner8"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="@dimen/_8sdp"
+        android:layout_margin="@dimen/_35sdp">
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/ll_uid">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/tv_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="Are You Sure Want to Confirm ?"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    app:tint="@color/colorWhite"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/v_negative"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/bg_corner8"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/droid_serif"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/v_positive"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/bg_corner8"
+                android:gravity="center"
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/droid_serif"
+                android:backgroundTint="@color/colorGreen"
+                android:textColor="@android:color/white"
+                android:text="ok"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

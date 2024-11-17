@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaundryActivity.QrCodeScannerActivity">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/v_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:src="@drawable/back"
+            app:tint="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="QR Code Scan"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/droid_serif"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="180dp"
+        android:paddingVertical="@dimen/_16sdp"
+        android:elevation="8dp">
+        <FrameLayout
+            android:id="@+id/fl_anim"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:elevation="8dp">
+            <ImageView
+                android:id="@+id/bt_qr_code_scan"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/code_qr"
+                android:scaleType="centerCrop"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_qr_code_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l1"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="42dp"
+        android:hint="\n\n\n\n\n"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btn_verify_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="40dp"
+        android:enabled="false"
+        android:layout_marginEnd="42dp"
+       android:backgroundTint="@color/colorAccent"
+        android:text="Verfiy" />
+</RelativeLayout>
