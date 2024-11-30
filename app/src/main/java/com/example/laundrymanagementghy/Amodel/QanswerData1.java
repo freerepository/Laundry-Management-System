@@ -5,6 +5,18 @@ public class QanswerData1 {
     private String quantity;
     private String reason;
 
+    private int buffer;
+    public int getBuffr(){
+        return buffer;
+    }
+
+    public QanswerData1 setBuffer(int bfr){
+        this.buffer = bfr;
+        return this;
+    }
+
+    //set other field to set your data in your map
+
     public String getQuest_id() {
         return quest_id;
     }

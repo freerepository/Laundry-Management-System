@@ -72,7 +72,7 @@ public class CondemnedBedrollActivity extends AppCompatActivity {
     private final static String VARIFY_CONFIRM_API = "http://lmsguwahati.projectrailway.in/api/VerifyStatus";
 
     ImageView iv_add_supply;
-    TextView tv_tittle, tv_empty_data;
+    TextView tv_tittle, tv_empty_data,stts;
     EditText et_dateFrom, et_dateTo;
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
@@ -139,6 +139,8 @@ public class CondemnedBedrollActivity extends AppCompatActivity {
 //        tv_tittle.setText(userdataModel.mUserItems.get(0).mHeader);
         iv_add_supply = findViewById(R.id.v_add_scondemned);
         tv_empty_data = findViewById(R.id.tv_empty_data);
+        stts = findViewById(R.id.stts);
+        stts.setVisibility(View.GONE);
 
 //        iv_add_supply = findViewById(R.id.iv_add_supply);
 //        tv_empty_data = findViewById(R.id.tv_empty_data);
@@ -377,6 +379,11 @@ public class CondemnedBedrollActivity extends AppCompatActivity {
             holder.tv1.setText(item.mSubmission_date);
             holder.tv2.setText(item.mLaundry);
             holder.tv3.setText(item.mDelivery_status);
+            holder.tv3.setVisibility(View.GONE);
+//            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) holder.tv3.getLayoutParams();
+////            params.weight = 0.0f;
+//            holder.tv3.setLayoutParams(params);
+
 
             holder.iv_view.setOnClickListener(new View.OnClickListener() {
                 @Override

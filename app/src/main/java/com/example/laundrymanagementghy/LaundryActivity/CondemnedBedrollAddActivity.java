@@ -498,7 +498,7 @@ public class CondemnedBedrollAddActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull final SupplyCondAddBsradapter.PenViewHolder holder, final int position) {
             holder.setIsRecyclable(false);
-
+            holder.tv_item_qty.setVisibility(View.GONE);
 //            EditText et_quantity;
 //            Spinner sp_item;
             if (holder.currentTextWatcher != null) {
@@ -600,7 +600,7 @@ public class CondemnedBedrollAddActivity extends AppCompatActivity {
         }
 
         public class PenViewHolder extends RecyclerView.ViewHolder {
-            TextView tv_index, tv_ques;
+            TextView tv_index, tv_ques,tv_item_qty;
             EditText et_quantity;
             Spinner sp_item;
             TextWatcher currentTextWatcher;
@@ -608,6 +608,7 @@ public class CondemnedBedrollAddActivity extends AppCompatActivity {
             public PenViewHolder(@NonNull View itemView) {
                 super(itemView);
                 tv_index = itemView.findViewById(R.id.tv_index_number);
+                tv_item_qty = itemView.findViewById(R.id.tv_item_qty);
                 tv_ques = itemView.findViewById(R.id.tv_qus);
                 et_quantity = itemView.findViewById(R.id.et_quantity);
                 sp_item = itemView.findViewById(R.id.sp_item);
