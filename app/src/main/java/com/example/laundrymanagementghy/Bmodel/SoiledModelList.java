@@ -96,5 +96,22 @@ public class SoiledModelList implements Serializable {
         public String mDepot_name;
         @SerializedName("delivery_status")
         public String mDelivery_status;
+
+
+        //unused item
+        @SerializedName("bs_unused")
+        public String mBs_unsed;
+        @SerializedName("pillow_unused")
+        public String mPillow_unused;
+        @SerializedName("pc_unused")
+        public String mPc_unused;
+        @SerializedName("blanket_unused")
+        public String mBlanket_unused;
+        @SerializedName("blc_unused")
+        public String mBlc_unused;
+        @SerializedName("ht_unused")
+        public String mHt_unused;
+
+
     }
 }

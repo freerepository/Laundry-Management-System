@@ -18,10 +18,8 @@ public class SupplyList implements Serializable {
         public String mDepot_code;
         @SerializedName("date")
         public String mSupply_date;
-
         @SerializedName("supply_date")
         public String mSupply_date2;
-
         @SerializedName("train")
         public String mTrain_id;
         @SerializedName("coach")
@@ -46,7 +44,6 @@ public class SupplyList implements Serializable {
         public String mPillow;
         @SerializedName("pillow_return")
         public String mPillow_return;
-
         @SerializedName("ft")
         public String mFt;
         @SerializedName("bath_towel")
@@ -79,7 +76,6 @@ public class SupplyList implements Serializable {
         public String mLaundryId;
 
 
-
         /////////////////////////////////////////////////////////////////////////////////////////
 
         @SerializedName("bs_return")
@@ -100,6 +96,20 @@ public class SupplyList implements Serializable {
         @SerializedName("bathtowel_return")
         public String bathTowelReturn;
 
-    }
 
+        //unused item
+        @SerializedName("bs_unused")
+        public String mBs_unsed;
+        @SerializedName("pillow_unused")
+        public String mPillow_unused;
+        @SerializedName("pc_unused")
+        public String mPc_unused;
+        @SerializedName("blanket_unused")
+        public String mBlanket_unused;
+        @SerializedName("blc_unused")
+        public String mBlc_unused;
+        @SerializedName("ht_unused")
+        public String mHt_unused;
+
+    }
 }

@@ -203,7 +203,7 @@ public class BFreshBedrollReceiptFromLaundryActivity extends AppCompatActivity {
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("depot_code", userdataModel.mUserItems.get(0).mDepot_code);
-            srl.setRefreshing(true); // Start refreshing animation
+            srl.setRefreshing(true);
         } catch (Exception e) {
             e.printStackTrace();
         }

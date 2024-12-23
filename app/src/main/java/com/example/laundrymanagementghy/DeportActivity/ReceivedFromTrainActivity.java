@@ -501,9 +501,9 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                     if (jsonResponse != null && jsonResponse.has("message")) {
                         String message = jsonResponse.getString("message");
 
-                        showConfirmationDialog(message,uiModeManager);
+                        showConfirmationDialog(message, uiModeManager);
                     } else {
-                        showConfirmationDialog(response,uiModeManager);
+                        showConfirmationDialog(response, uiModeManager);
                     }
                     Type listType = new TypeToken<List<SaveReceived>>() {
                     }.getType();
@@ -757,9 +757,18 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                 list.get(position).mBlanket_cover,
                                 list.get(position).mBath_towel,
                                 list.get(position).mBlanket,
-                                list.get(position).mDepot_Remark
+                                list.get(position).mDepot_Remark,
+// unused item
+                                list.get(position).mBs_unsed,
+                                list.get(position).mPillow_unused,
+                                list.get(position).mPc_unused,
+                                list.get(position).mBlanket_unused,
+                                list.get(position).mBlc_unused,
+                                list.get(position).mHt_unused
+
                         );
                     }
+
 
                     private void showLogoutAlertDialog(
                             String pillow,
@@ -777,13 +786,21 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             String mBlanket_cover,
                             String mBath_towel,
                             String mBlanket,
-                            String mRemark
+                            String mRemark,
+
+                            //unused item
+                            String mbs_u,
+                            String mpillow_u,
+                            String mpillowcover_u,
+                            String mblanket_u,
+                            String mblanketcover_u,
+                            String mht_u
                     ) {
                         final Dialog dialog = new Dialog(ReceivedFromTrainActivity.this, R.style.Dialog);
                         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
                         dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
                         //dialog.setCancelable(false);
-                        dialog.setContentView(R.layout.diolog_edit_received2);
+                        dialog.setContentView(R.layout.diolog_edit_received3);
 
                         final TextView tv_date = dialog.findViewById(R.id.tv_dated);
                         final TextView tv_select_train = dialog.findViewById(R.id.tv_train_Nod);
@@ -807,48 +824,28 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
 //                        final EditText et_BathTowel = dialog.findViewById(R.id.et_qty_bath_towel_d);
                         final EditText et_remark = dialog.findViewById(R.id.et_remarkd);
 
+                        //unused item editText
+                        final EditText et_unused_BedSheet = dialog.findViewById(R.id.et_qty_bed_sheet_unUsed);
+                        final EditText et_unused_pillowCover = dialog.findViewById(R.id.et_qty_pillow_cover_d_unUsed);
+                        final EditText et_unused_pillow = dialog.findViewById(R.id.et_qty_pillow_d_unUsed); //yaha data jab bhi submit hoga tab pillow return mai jayega
+                        final EditText et_unused_FaceTowel = dialog.findViewById(R.id.et_qty_face_towel_d_unUsed);
+                        final EditText et_unused_Blanket = dialog.findViewById(R.id.et_qty_blanket_d_unUsed);
+                        final EditText et_unused_BlanketCover = dialog.findViewById(R.id.et_qty_blanket_cover_d_unUsed);
 
-                        if (list.get(position).mBs != null) {
-                            et_BedSheet.setText(list.get(position).mBs);
-                        } else {
-                            et_BedSheet.setText("");
-                        }
+                        setTextOrDefault(et_BedSheet, list.get(position).bsReturn);
+                        setTextOrDefault(et_pillowCover, list.get(position).pcReturn);
+                        setTextOrDefault(et_pillow, list.get(position).mPillow_return);
+                        setTextOrDefault(et_FaceTowel, list.get(position).ftReturn);
+                        setTextOrDefault(et_BlanketCover, list.get(position).blkReturn);
+                        setTextOrDefault(et_Blanket, list.get(position).blanketReturn);
 
-                        if (list.get(position).bsReturn != null) {
-                            et_BedSheet.setText(list.get(position).bsReturn);
-                        } else {
-                            et_BedSheet.setText("");
-                        }
-                        if (list.get(position).pcReturn != null) {
-                            et_pillowCover.setText(list.get(position).pcReturn);
-                        } else {
-                            et_pillowCover.setText("");
-                        }
-                        if (list.get(position).mPillow_return != null) {
-                            et_pillow.setText(list.get(position).mPillow_return);
-                        } else {
-                            et_pillow.setText("");
-                        }
+                        setTextOrDefault(et_unused_BlanketCover, list.get(position).mBlc_unused);
+                        setTextOrDefault(et_unused_Blanket, list.get(position).mBlanket_unused);
+                        setTextOrDefault(et_unused_BedSheet, list.get(position).mBs_unsed);
+                        setTextOrDefault(et_unused_pillowCover, list.get(position).mPc_unused);
+                        setTextOrDefault(et_unused_pillow, list.get(position).mPillow_unused);
+                        setTextOrDefault(et_unused_FaceTowel, list.get(position).mHt_unused);
 
-
-                        if (list.get(position).ftReturn != null) {
-                            et_FaceTowel.setText(list.get(position).ftReturn);
-                        } else {
-                            et_FaceTowel.setText("");
-
-                        }
-                        if (list.get(position).blkReturn != null) {
-                            et_BlanketCover.setText(list.get(position).blkReturn);
-                        } else {
-                            et_BlanketCover.setText("");
-
-                        }
-                        if (list.get(position).blanketReturn != null) {
-                            et_Blanket.setText(list.get(position).blanketReturn);
-                        } else {
-                            et_Blanket.setText("");
-
-                        }
 //                        if (list.get(position).bathTowelReturn != null) {
 ////                            et_BathTowel.setText(list.get(position).bathTowelReturn);
 //                        } else {
@@ -875,35 +872,69 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             dialog.findViewById(R.id.v_positive).setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    if (Integer.parseInt(list.get(position).mBs) < Integer.parseInt(et_BedSheet.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "BedSheet to large", Toast.LENGTH_SHORT).show();
-                                    } else if (Integer.parseInt(list.get(position).mFt) < Integer.parseInt(et_FaceTowel.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "FaceTowel to large", Toast.LENGTH_SHORT).show();
-                                    } else if (Integer.parseInt(list.get(position).mBlanket_cover) < Integer.parseInt(et_BlanketCover.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "Blanket cover to large", Toast.LENGTH_SHORT).show();
-                                    }/* else if (Integer.parseInt(list.get(position).mBath_towel) < Integer.parseInt(et_BathTowel.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "HandTowel to large", Toast.LENGTH_SHORT).show();
-                                    }*/ else if (Integer.parseInt(list.get(position).mBlanket) < Integer.parseInt(et_Blanket.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "Blanket to large", Toast.LENGTH_SHORT).show();
+
+                                    if (
+                                            et_BedSheet.getText().toString().isEmpty() ||
+                                                    et_Blanket.getText().toString().isEmpty() ||
+                                                    et_BlanketCover.getText().toString().isEmpty() ||
+                                                    et_FaceTowel.getText().toString().isEmpty() ||
+                                                    et_pillow.getText().toString().isEmpty() ||
+                                                    et_pillowCover.getText().toString().isEmpty()
+
+                                                    /*|| et_unused_pillow.getText().toString().isEmpty() ||
+                                                    et_unused_BedSheet.getText().toString().isEmpty() ||
+                                                    et_unused_pillowCover.getText().toString().isEmpty() ||
+                                                    et_unused_FaceTowel.getText().toString().isEmpty() ||
+                                                    et_unused_BlanketCover.getText().toString().isEmpty() ||
+                                                    et_unused_Blanket.getText().toString().isEmpty()*/
+
+
+                                    ) {
+                                        Toast.makeText(ReceivedFromTrainActivity.this, "All Fields are mandatory", Toast.LENGTH_SHORT).show();
                                     } else {
-                                        try {
-                                            EditDataSave(
-                                                    rowId,
-                                                    laundryId,
-                                                    mLaundry_name,
-                                                    mDate,
-                                                    et_pillow.getText().toString(),
-                                                    et_BedSheet.getText().toString(),
-                                                    et_pillowCover.getText().toString(),
-                                                    et_FaceTowel.getText().toString(),
-                                                    et_BlanketCover.getText().toString(),
-//                                                    et_BathTowel.getText().toString(),//ok
-                                                    et_Blanket.getText().toString(),//ok
-                                                    et_remark.getText().toString());//ok
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
+                                        if (Integer.parseInt(list.get(position).mBs) < Integer.parseInt(et_BedSheet.getText().toString())) {
+                                            Toast.makeText(ReceivedFromTrainActivity.this, "BedSheet to large", Toast.LENGTH_SHORT).show();
+                                        } else if (Integer.parseInt(list.get(position).mPillow) < Integer.parseInt(et_pillow.getText().toString())) {
+                                            Toast.makeText(ReceivedFromTrainActivity.this, "Pillow to large", Toast.LENGTH_SHORT).show();
+                                        } else if (Integer.parseInt(list.get(position).mPc) < Integer.parseInt(et_pillowCover.getText().toString())) {
+                                            Toast.makeText(ReceivedFromTrainActivity.this, "Pillow cover to large", Toast.LENGTH_SHORT).show();
+                                        } else if (Integer.parseInt(list.get(position).mBlanket) < Integer.parseInt(et_Blanket.getText().toString())) {
+                                            Toast.makeText(ReceivedFromTrainActivity.this, "Blanket to large", Toast.LENGTH_SHORT).show();
+                                        } else if (Integer.parseInt(list.get(position).mBlanket_cover) < Integer.parseInt(et_BlanketCover.getText().toString())) {
+                                            Toast.makeText(ReceivedFromTrainActivity.this, "Blanket cover to large", Toast.LENGTH_SHORT).show();
+                                        } else if (Integer.parseInt(list.get(position).mFt) < Integer.parseInt(et_FaceTowel.getText().toString())) {
+                                            Toast.makeText(ReceivedFromTrainActivity.this, "Hand Towel to large", Toast.LENGTH_SHORT).show();
+                                        } else {
+
+                                            try {
+                                                EditDataSave(
+                                                        rowId,
+                                                        laundryId,
+                                                        mLaundry_name,
+                                                        mDate,
+                                                        et_pillow.getText().toString(),
+                                                        et_BedSheet.getText().toString(),
+                                                        et_pillowCover.getText().toString(),
+                                                        et_FaceTowel.getText().toString(),
+                                                        et_BlanketCover.getText().toString(),
+                                                        et_Blanket.getText().toString(),//ok
+                                                        et_remark.getText().toString(),
+
+                                                        //unused item
+                                                        et_unused_pillow.getText().toString(),
+                                                        et_unused_BedSheet.getText().toString(),
+                                                        et_unused_pillowCover.getText().toString(),
+                                                        et_unused_FaceTowel.getText().toString(),
+                                                        et_unused_BlanketCover.getText().toString(),
+                                                        et_unused_Blanket.getText().toString());//ok
+
+
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
                                         }
                                     }
+
                                 }
 
                             });
@@ -921,6 +952,9 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
 
                     }
 
+                    private void setTextOrDefault(EditText editText, String value) {
+                        editText.setText(value != null ? value : "");
+                    }
 //                private void getLaundryType() {
 //                    final JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, LAUNDRY_API, null,
 //                            new Response.Listener<JSONObject>() {
@@ -968,7 +1002,15 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             String blanket_cover,
 //                            String bath_towel,
                             String blanket,
-                            String remark
+                            String remark,
+
+                            //unused
+                            String ubs,
+                            String upillow,
+                            String upillocover,
+                            String ufacetowel,
+                            String ublanket,
+                            String ublanketcover
                     ) {
 
                         final JSONObject jsonObject = new JSONObject();
@@ -986,6 +1028,15 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             jsonObject.put("blanket_return", blanket);
                             jsonObject.put("bathtowel_return", "");
                             jsonObject.put("remark", remark);
+
+                            jsonObject.put("bs_unused", ubs.isEmpty() ? "0" : ubs);
+                            jsonObject.put("pillow_unused", upillow.isEmpty() ? "0" : upillow);
+                            jsonObject.put("pc_unused", upillocover.isEmpty() ? "0" : upillocover);
+                            jsonObject.put("blanket_unused", ublanket.isEmpty() ? "0" : ublanket);
+                            jsonObject.put("blc_unused", ublanketcover.isEmpty() ? "0" : ublanketcover);
+                            jsonObject.put("ht_unused", ufacetowel.isEmpty() ? "0" : ufacetowel);
+
+
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -1009,9 +1060,9 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                     if (jsonResponse != null && jsonResponse.has("message")) {
                                         String message = jsonResponse.getString("message");
 
-                                        showConfirmationDialog(message,uiModeManager);
+                                        showConfirmationDialog(message, uiModeManager);
                                     } else {
-                                        showConfirmationDialog(response,uiModeManager);
+                                        showConfirmationDialog(response, uiModeManager);
                                     }
                                     Type listType = new TypeToken<List<EditReceived>>() {
                                     }.getType();
@@ -1182,7 +1233,16 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                 list.get(position).mBlanket_cover,
                                 list.get(position).mBath_towel,
                                 list.get(position).mBlanket,
-                                list.get(position).mDepot_Remark
+                                list.get(position).mDepot_Remark,
+
+//                                list.get(position).mUnuseditem
+
+                                list.get(position).mBs_unsed,
+                                list.get(position).mPillow_unused,
+                                list.get(position).mPc_unused,
+                                list.get(position).mBlanket_unused,
+                                list.get(position).mBlc_unused,
+                                list.get(position).mHt_unused
                         );
                     }
 
@@ -1202,13 +1262,20 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             String mBlanket_cover,
                             String mBath_towel,
                             String mBlanket,
-                            String mRemark
+                            String mRemark,
+//                            String unuseditem
+                            String mbs_u,
+                            String mpillow_u,
+                            String mpillowcover_u,
+                            String mblanket_u,
+                            String mblanketcover_u,
+                            String mht_u
                     ) {
                         final Dialog dialog = new Dialog(ReceivedFromTrainActivity.this, R.style.Dialog);
                         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
                         dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
                         //dialog.setCancelable(false);
-                        dialog.setContentView(R.layout.diolog_edit_received2);
+                        dialog.setContentView(R.layout.diolog_edit_received3);
 
                         final TextView tv_date = dialog.findViewById(R.id.tv_dated);
                         final TextView tv_select_train = dialog.findViewById(R.id.tv_train_Nod);
@@ -1228,56 +1295,85 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                         //date
                         //laundry id
                         //depot code
+//                        final EditText et_BedSheet = dialog.findViewById(R.id.et_qty_bed_sheet);
+//                        final EditText et_pillowCover = dialog.findViewById(R.id.et_qty_pillow_cover_d);
+//                        final EditText et_pillow = dialog.findViewById(R.id.et_qty_pillow_d);
+//                        final EditText et_FaceTowel = dialog.findViewById(R.id.et_qty_face_towel_d);
+//                        final EditText et_Blanket = dialog.findViewById(R.id.et_qty_blanket_d);
+//                        final EditText et_BlanketCover = dialog.findViewById(R.id.et_qty_blanket_cover_d);
+////                        final EditText et_BathTowel = dialog.findViewById(R.id.et_qty_bath_towel_d);
+//                        final EditText et_remark = dialog.findViewById(R.id.et_remarkd);
+//
+//                        if (list.get(position).bsReturn != null) {
+//                            et_BedSheet.setText(list.get(position).bsReturn);
+//                        } else {
+//                            et_BedSheet.setText("");
+//                        }
+//                        if (list.get(position).pcReturn != null) {
+//                            et_pillowCover.setText(list.get(position).pcReturn);
+//                        } else {
+//                            et_pillowCover.setText("");
+//
+//                        }
+//                        if (list.get(position).ftReturn != null) {
+//                            et_FaceTowel.setText(list.get(position).ftReturn);
+//                        } else {
+//                            et_FaceTowel.setText("");
+//
+//                        }
+//                        if (list.get(position).blkReturn != null) {
+//                            et_BlanketCover.setText(list.get(position).blkReturn);
+//                        } else {
+//                            et_BlanketCover.setText("");
+//
+//                        }
+//                        if (list.get(position).blanketReturn != null) {
+//                            et_Blanket.setText(list.get(position).blanketReturn);
+//                        } else {
+//                            et_Blanket.setText("");
+//
+//                        }
+////                        if (list.get(position).bathTowelReturn != null) {
+////                            et_BathTowel.setText(list.get(position).bathTowelReturn);
+////                        } else {
+////                            et_BathTowel.setText("");
+////                        }
+//
+//                        if (list.get(position).mPillow_return != null) {
+//                            et_pillow.setText(list.get(position).mPillow_return);
+//                        } else {
+//                            et_pillow.setText("");
+//                        }
                         final EditText et_BedSheet = dialog.findViewById(R.id.et_qty_bed_sheet);
                         final EditText et_pillowCover = dialog.findViewById(R.id.et_qty_pillow_cover_d);
-                        final EditText et_pillow = dialog.findViewById(R.id.et_qty_pillow_d);
+                        final EditText et_pillow = dialog.findViewById(R.id.et_qty_pillow_d); //yaha data jab bhi submit hoga tab pillow return mai jayega
                         final EditText et_FaceTowel = dialog.findViewById(R.id.et_qty_face_towel_d);
                         final EditText et_Blanket = dialog.findViewById(R.id.et_qty_blanket_d);
                         final EditText et_BlanketCover = dialog.findViewById(R.id.et_qty_blanket_cover_d);
 //                        final EditText et_BathTowel = dialog.findViewById(R.id.et_qty_bath_towel_d);
                         final EditText et_remark = dialog.findViewById(R.id.et_remarkd);
 
-                        if (list.get(position).bsReturn != null) {
-                            et_BedSheet.setText(list.get(position).bsReturn);
-                        } else {
-                            et_BedSheet.setText("");
-                        }
-                        if (list.get(position).pcReturn != null) {
-                            et_pillowCover.setText(list.get(position).pcReturn);
-                        } else {
-                            et_pillowCover.setText("");
+                        //unused item editText
+                        final EditText et_unused_BedSheet = dialog.findViewById(R.id.et_qty_bed_sheet_unUsed);
+                        final EditText et_unused_pillowCover = dialog.findViewById(R.id.et_qty_pillow_cover_d_unUsed);
+                        final EditText et_unused_pillow = dialog.findViewById(R.id.et_qty_pillow_d_unUsed); //yaha data jab bhi submit hoga tab pillow return mai jayega
+                        final EditText et_unused_FaceTowel = dialog.findViewById(R.id.et_qty_face_towel_d_unUsed);
+                        final EditText et_unused_Blanket = dialog.findViewById(R.id.et_qty_blanket_d_unUsed);
+                        final EditText et_unused_BlanketCover = dialog.findViewById(R.id.et_qty_blanket_cover_d_unUsed);
 
-                        }
-                        if (list.get(position).ftReturn != null) {
-                            et_FaceTowel.setText(list.get(position).ftReturn);
-                        } else {
-                            et_FaceTowel.setText("");
+                        setTextOrDefault(et_BedSheet, list.get(position).bsReturn);
+                        setTextOrDefault(et_pillowCover, list.get(position).pcReturn);
+                        setTextOrDefault(et_pillow, list.get(position).mPillow_return);
+                        setTextOrDefault(et_FaceTowel, list.get(position).ftReturn);
+                        setTextOrDefault(et_BlanketCover, list.get(position).blkReturn);
+                        setTextOrDefault(et_Blanket, list.get(position).blanketReturn);
 
-                        }
-                        if (list.get(position).blkReturn != null) {
-                            et_BlanketCover.setText(list.get(position).blkReturn);
-                        } else {
-                            et_BlanketCover.setText("");
-
-                        }
-                        if (list.get(position).blanketReturn != null) {
-                            et_Blanket.setText(list.get(position).blanketReturn);
-                        } else {
-                            et_Blanket.setText("");
-
-                        }
-//                        if (list.get(position).bathTowelReturn != null) {
-//                            et_BathTowel.setText(list.get(position).bathTowelReturn);
-//                        } else {
-//                            et_BathTowel.setText("");
-//                        }
-
-                        if (list.get(position).mPillow_return != null) {
-                            et_pillow.setText(list.get(position).mPillow_return);
-                        } else {
-                            et_pillow.setText("");
-                        }
-
+                        setTextOrDefault(et_unused_BlanketCover, list.get(position).mBlc_unused);
+                        setTextOrDefault(et_unused_Blanket, list.get(position).mBlanket_unused);
+                        setTextOrDefault(et_unused_BedSheet, list.get(position).mBs_unsed);
+                        setTextOrDefault(et_unused_pillowCover, list.get(position).mPc_unused);
+                        setTextOrDefault(et_unused_pillow, list.get(position).mPillow_unused);
+                        setTextOrDefault(et_unused_FaceTowel, list.get(position).mHt_unused);
 
                         tv_date.setText(mDate);
                         tv_select_train.setText(mTrain_no);
@@ -1323,7 +1419,19 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                                     et_BlanketCover.getText().toString(),
 //                                                    et_BathTowel.getText().toString(),//ok
                                                     et_Blanket.getText().toString(),//ok
-                                                    et_remark.getText().toString());//ok
+                                                    et_remark.getText().toString(),
+
+                                                    et_unused_pillow.getText().toString(),
+                                                    et_unused_BedSheet.getText().toString(),
+                                                    et_unused_pillowCover.getText().toString(),
+                                                    et_unused_FaceTowel.getText().toString(),
+                                                    et_unused_BlanketCover.getText().toString(),
+                                                    et_unused_Blanket.getText().toString()
+
+
+                                            );//ok
+
+
                                         } catch (Exception e) {
                                             e.printStackTrace();
                                         }
@@ -1342,7 +1450,7 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
 
                     }
 
-//                private void getLaundryType() {
+                    //                private void getLaundryType() {
 //                    final JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, LAUNDRY_API, null,
 //                            new Response.Listener<JSONObject>() {
 //                                @Override
@@ -1375,7 +1483,9 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
 //                    requestQueue.add(objectRequest);
 //
 //                }
-
+                    private void setTextOrDefault(EditText editText, String value) {
+                        editText.setText(value != null ? value : "");
+                    }
 
                     private void EditDataSave(
                             String row_id,
@@ -1389,7 +1499,14 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             String blanket_cover,
 //                            String bath_towel,
                             String blanket,
-                            String remark
+                            String remark,
+
+                            String ubs,
+                            String upillow,
+                            String upillocover,
+                            String ufacetowel,
+                            String ublanket,
+                            String ublanketcover
                     ) {
 
                         final JSONObject jsonObject = new JSONObject();
@@ -1407,6 +1524,15 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             jsonObject.put("blanket_return", blanket);
                             jsonObject.put("bathtowel_return", "");
                             jsonObject.put("remark", remark);
+
+                            jsonObject.put("bs_unused", ubs);
+                            jsonObject.put("pillow_unused", upillow);
+                            jsonObject.put("pc_unused", upillocover);
+                            jsonObject.put("blanket_unused", ublanket);
+                            jsonObject.put("blc_unused", ublanketcover);
+                            jsonObject.put("ht_unused", ufacetowel);
+
+
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -1430,9 +1556,9 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                     if (jsonResponse != null && jsonResponse.has("message")) {
                                         String message = jsonResponse.getString("message");
 
-                                        showConfirmationDialog(message,uiModeManager);
+                                        showConfirmationDialog(message, uiModeManager);
                                     } else {
-                                        showConfirmationDialog(response,uiModeManager);
+                                        showConfirmationDialog(response, uiModeManager);
                                     }
                                     Type listType = new TypeToken<List<EditReceived>>() {
                                     }.getType();
@@ -1566,7 +1692,7 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
         dialog.dismiss();
     }
 
-    public void showConfirmationDialog(String strMessage,UiModeManager uiModeManager) {
+    public void showConfirmationDialog(String strMessage, UiModeManager uiModeManager) {
         final Dialog dialog = new Dialog(ReceivedFromTrainActivity.this);
         dialog.setCancelable(false);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -1575,9 +1701,9 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
         TextView tvtitle = dialog.findViewById(R.id.confirmMessageTitle);
         TextView tvMessage = dialog.findViewById(R.id.tv_message);
 
-        if (uiModeManager.getNightMode()==UiModeManager.MODE_NIGHT_YES){
-            tvtitle.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.whiteTextColor));
-            tvMessage.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.whiteTextColor));
+        if (uiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
+            tvtitle.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.whiteTextColor));
+            tvMessage.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.whiteTextColor));
         }
 
 

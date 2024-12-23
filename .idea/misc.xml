@@ -86,7 +86,8 @@
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_add_received2.xml" value="0.26875" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_buffer_laundry.xml" value="0.27291666666666664" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_edit_received.xml" value="0.25462962962962965" />
-        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_edit_received2.xml" value="0.25" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_edit_received2.xml" value="0.33" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_edit_received3.xml" value="0.33" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_edit_received_2_update.xml" value="0.25" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/diolog_update_delivery.xml" value="0.33" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/fragment_first.xml" value="0.27291666666666664" />
@@ -122,7 +123,7 @@
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_buffer_received_laundry.xml" value="0.2490740740740741" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_fresh_supply_list.xml" value="0.27291666666666664" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_rama_received_list.xml" value="0.2682051282051282" />
-        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_receiced_from_store_list.xml" value="0.67" />
+        <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_receiced_from_store_list.xml" value="0.27291666666666664" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/row_supply_condemnet_bslist.xml" value="0.25" />
         <entry key="..\:/LaundryManagement_GHY/app/src/main/res/layout/spinner_selected_item.xml" value="0.27291666666666664" />
       </map>

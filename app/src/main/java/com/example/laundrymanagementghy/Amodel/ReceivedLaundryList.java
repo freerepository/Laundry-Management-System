@@ -38,6 +38,19 @@ public class ReceivedLaundryList implements Serializable{
         public String mBs_first_ac;
         @SerializedName("bs")
         public String mBs;
+
+        @SerializedName("pillow")
+        public String mPillow;
+        @SerializedName("laundry")
+        public String mLaundry;
+        @SerializedName("laundry_id")
+        public String mLaundryId;
+        @SerializedName("depot_remark")
+        public String mDepot_Remark;
+
+        @SerializedName("pillow_return")
+        public String mPillow_return;
+
         @SerializedName("pc_first_ac")
         public String mPc_first_ac;
         @SerializedName("pc")
@@ -70,6 +83,25 @@ public class ReceivedLaundryList implements Serializable{
         public String mLaundry_area;
         @SerializedName("delivery_status")
         public String mDelivery_status;
+
+
+        @SerializedName("bs_return")
+        public String bsReturn;
+
+        @SerializedName("pc_return")
+        public String pcReturn;
+
+        @SerializedName("ft_return")
+        public String ftReturn;
+
+        @SerializedName("blk_return")
+        public String blkReturn;
+
+        @SerializedName("blanket_return")
+        public String blanketReturn;
+
+        @SerializedName("bathtowel_return")
+        public String bathTowelReturn;
 
     }
 

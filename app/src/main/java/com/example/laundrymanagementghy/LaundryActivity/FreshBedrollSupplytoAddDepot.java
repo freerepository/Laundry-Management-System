@@ -63,29 +63,29 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
     private final static String GET_COACH_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_coach";
     private final static String GET_TRAIN_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_trains";
     private final static String SAVE_API = "http://lmsguwahati.projectrailway.in/Api/save_supply_to_laundry";
-    EditText et_no_of_bag,et_bed_sheet,et_pillow_cover,et_face_towel,
-            et_blanket_cover,et_bath_towel,et_blanket,et_total_packets,et_remark,et_date,et_pillow;
+    EditText et_no_of_bag, et_bed_sheet, et_pillow_cover, et_face_towel,
+            et_blanket_cover, et_bath_towel, et_blanket, et_total_packets, et_remark, et_date, et_pillow;
     TextView btn_submit;
-    ImageView ic_calender,v_negative;
+    ImageView ic_calender, v_negative;
     AlertDialog dialog;
     ProgressDialog mProgressDialog;
-    Spinner sp_depot,sp_train,sp_coach;
-    public String selectedDepot="",selectedTrain="",selectedCoach="",depot;
+    Spinner sp_depot, sp_train, sp_coach;
+    public String selectedDepot = "", selectedTrain = "", selectedCoach = "", depot;
     final Calendar myCalendar = Calendar.getInstance();
     UserDataModel userDataModel;
-    ArrayList<String> depot_list = new ArrayList<>(),depot_id_list = new ArrayList<>();
+    ArrayList<String> depot_list = new ArrayList<>(), depot_id_list = new ArrayList<>();
 
     ArrayList<String> train_list = new ArrayList<>(), train_id_list = new ArrayList<>();
     ArrayList<String> coach_list = new ArrayList<>(), coach_id_list = new ArrayList<>();
     UiModeManager uiModeManager;
-    ArrayAdapter<String> adapter_depot, adapter_train,adapter_coach;
+    ArrayAdapter<String> adapter_depot, adapter_train, adapter_coach;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fresh_bedroll_add_supply_depot);
         try {
-            depot=getIntent().getStringExtra("depot_code");
+            depot = getIntent().getStringExtra("depot_code");
 
             userDataModel = new Gson().fromJson(O.getPreference(this, O.USER_DATA), UserDataModel.class);
         } catch (Exception e) {
@@ -104,7 +104,6 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
         TextView tv10 = findViewById(R.id.txt10);
 
 
-
         et_no_of_bag = findViewById(R.id.et_no_of_bag);//
         et_bed_sheet = findViewById(R.id.et_bed_sheet);//
         et_pillow_cover = findViewById(R.id.et_pillow_cover);
@@ -118,13 +117,13 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
         et_remark = findViewById(R.id.et_remark); //
         et_date = findViewById(R.id.et_date);//
         et_pillow = findViewById(R.id.et_pillow);//
-        ic_calender=findViewById(R.id.ic_calender);
+        ic_calender = findViewById(R.id.ic_calender);
         btn_submit = findViewById(R.id.v_positives);
-        sp_depot=findViewById(R.id.sp_depot);
-        sp_train=findViewById(R.id.sp_select_train);
-        sp_coach=findViewById(R.id.sp_select_coach);
+        sp_depot = findViewById(R.id.sp_depot);
+        sp_train = findViewById(R.id.sp_select_train);
+        sp_coach = findViewById(R.id.sp_select_coach);
 
-        v_negative=findViewById(R.id.v_negative);
+        v_negative = findViewById(R.id.v_negative);
         v_negative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,38 +132,38 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
         });
 
         uiModeManager = (UiModeManager) getSystemService(UI_MODE_SERVICE);
-        if (uiModeManager.getNightMode()==UiModeManager.MODE_NIGHT_YES) {
+        if (uiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
             et_bed_sheet.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_bed_sheet.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_bed_sheet.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
 
             et_pillow.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
             et_pillow.setTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_pillow.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_pillow.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
 
 
 //            et_bath_towel.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
 //            et_bath_towel.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
             et_blanket.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_blanket.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_blanket.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
             et_no_of_bag.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_no_of_bag.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_no_of_bag.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
             et_total_packets.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_total_packets.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
-            sp_coach.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
-            sp_train.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_total_packets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
+            sp_coach.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
+            sp_train.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
             et_date.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            findViewById(R.id.rlv2).setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
-            findViewById(R.id.dev1).setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            findViewById(R.id.rlv2).setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
+            findViewById(R.id.dev1).setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
 
 //            et_date.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
             et_blanket_cover.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_blanket_cover.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_blanket_cover.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
             et_face_towel.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_face_towel.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_face_towel.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
             et_remark.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_remark.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_remark.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
             et_pillow_cover.setHintTextColor(getResources().getColor(R.color.whiteTextColor));
-            et_pillow_cover.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.shape_white));
+            et_pillow_cover.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shape_white));
 
             et_bed_sheet.setTextColor(getResources().getColor(R.color.whiteTextColor));
 //            et_bath_towel.setTextColor(getResources().getColor(R.color.whiteTextColor));
@@ -176,7 +175,6 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
             et_face_towel.setTextColor(getResources().getColor(R.color.whiteTextColor));
             et_remark.setTextColor(getResources().getColor(R.color.whiteTextColor));
             et_pillow_cover.setTextColor(getResources().getColor(R.color.whiteTextColor));
-
 
 
             tv1.setTextColor(getResources().getColor(R.color.whiteTextColor));
@@ -191,10 +189,7 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
             tv10.setTextColor(getResources().getColor(R.color.whiteTextColor));
 
 
-
-
-        }else
-        {
+        } else {
             et_pillow.setHintTextColor(getResources().getColor(R.color.black));
             et_pillow.setTextColor(getResources().getColor(R.color.black));
 
@@ -223,7 +218,6 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
 
 
         }
-
 
 
         final DatePickerDialog.OnDateSetListener journeyDate1 = new DatePickerDialog.OnDateSetListener() {
@@ -288,7 +282,7 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
                     selectedDepot = depot_list.get(i);
                     GetTrainType(selectedDepot);
 
-                    Log.e("selectedDepot",selectedDepot);
+                    Log.e("selectedDepot", selectedDepot);
                 }
             }
 
@@ -344,12 +338,26 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(et_date.getText().toString())) {
                     Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Select Date", Toast.LENGTH_LONG).show();
-                } else if (sp_depot.getSelectedItemPosition()==0) {
+                } else if (sp_depot.getSelectedItemPosition() == 0) {
                     Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Select Depot ", Toast.LENGTH_LONG).show();
-                } else if (sp_train.getSelectedItemPosition()==0) {
+                } else if (sp_train.getSelectedItemPosition() == 0) {
                     Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Select Train", Toast.LENGTH_LONG).show();
-                } else if (sp_coach.getSelectedItemPosition()==0) {
-                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Select Coach",Toast.LENGTH_LONG).show();
+                } else if (sp_coach.getSelectedItemPosition() == 0) {
+                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Select Coach", Toast.LENGTH_LONG).show();
+                } else if (et_no_of_bag.getText().toString().isEmpty()) {
+                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Number of bags is empty", Toast.LENGTH_LONG).show();
+                } else if (et_bed_sheet.getText().toString().isEmpty()) {
+                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Bed Sheet is empty", Toast.LENGTH_LONG).show();
+                } else if (et_pillow.getText().toString().isEmpty()) {
+                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Pillow is empty", Toast.LENGTH_LONG).show();
+                } else if (et_pillow_cover.getText().toString().isEmpty()) {
+                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Pillow cover is empty", Toast.LENGTH_LONG).show();
+                } else if (et_blanket.getText().toString().isEmpty()) {
+                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Blanket is empty", Toast.LENGTH_LONG).show();
+                } else if (et_blanket_cover.getText().toString().isEmpty()) {
+                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Blanket Cover is empty", Toast.LENGTH_LONG).show();
+                } else if (et_face_towel.getText().toString().isEmpty()) {
+                    Toast.makeText(FreshBedrollSupplytoAddDepot.this, "Hand Towel is empty", Toast.LENGTH_LONG).show();
                 } else {
                     try {
                         SaveLaundrySupply();
@@ -362,31 +370,31 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
             private void SaveLaundrySupply() {
                 final JSONObject jsonObject = new JSONObject();
                 try {
-                    jsonObject.put("laundry_id",userDataModel.mUserItems.get(0).mLaundryID);
-                    jsonObject.put("laundry_supply_id",userDataModel.mUserItems.get(0).mLogin_id);
-                    jsonObject.put("supply_date",et_date.getText().toString());
-                    jsonObject.put("depot_id",depot_id_list.get(sp_depot.getSelectedItemPosition()));
-                    jsonObject.put("train_no",selectedTrain);
-                    jsonObject.put("coach",selectedCoach);
-                    jsonObject.put("no_of_bag",et_no_of_bag.getText().toString());
-                    jsonObject.put("bs_first_ac","");
-                    jsonObject.put("pc_first_ac","");
-                    jsonObject.put("bs",et_bed_sheet.getText().toString());
-                    jsonObject.put("pillow",et_pillow.getText().toString().trim());
-                    jsonObject.put("pc",et_pillow_cover.getText().toString());
-                    jsonObject.put("ft",et_face_towel.getText().toString());
-                    jsonObject.put("blanket_cover",et_blanket_cover.getText().toString());
-                    jsonObject.put("bath_towel","");
-                    jsonObject.put("no_blanket",et_blanket.getText().toString());
-                    jsonObject.put("packet_count",et_total_packets.getText().toString());
-                    jsonObject.put("remark",et_remark.getText().toString());
+                    jsonObject.put("laundry_id", userDataModel.mUserItems.get(0).mLaundryID);
+                    jsonObject.put("laundry_supply_id", userDataModel.mUserItems.get(0).mLogin_id);
+                    jsonObject.put("supply_date", et_date.getText().toString());
+                    jsonObject.put("depot_id", depot_id_list.get(sp_depot.getSelectedItemPosition()));
+                    jsonObject.put("train_no", selectedTrain);
+                    jsonObject.put("coach", selectedCoach);
+                    jsonObject.put("no_of_bag", et_no_of_bag.getText().toString());
+                    jsonObject.put("bs_first_ac", "");
+                    jsonObject.put("pc_first_ac", "");
+                    jsonObject.put("bs", et_bed_sheet.getText().toString());
+                    jsonObject.put("pillow", et_pillow.getText().toString().trim());
+                    jsonObject.put("pc", et_pillow_cover.getText().toString());
+                    jsonObject.put("ft", et_face_towel.getText().toString());
+                    jsonObject.put("blanket_cover", et_blanket_cover.getText().toString());
+                    jsonObject.put("bath_towel", "");
+                    jsonObject.put("no_blanket", et_blanket.getText().toString());
+                    jsonObject.put("packet_count", et_total_packets.getText().toString());
+                    jsonObject.put("remark", et_remark.getText().toString());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 final String requestBody = jsonObject.toString();
                 Log.e("responseAa", requestBody);
                 showLoading("Please wait...");
-                StringRequest stringRequest = new StringRequest(Request.Method.POST,SAVE_API, new Response.Listener<String>() {
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, SAVE_API, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         hideLoading();
@@ -401,9 +409,9 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
                             if (jsonResponse != null && jsonResponse.has("message")) {
 //                                String message = jsonResponse.getString("message");
 
-                                showConfirmationDialog("Data Saved Successfully",uiModeManager);
+                                showConfirmationDialog("Data Saved Successfully", uiModeManager);
                             } else {
-                                showConfirmationDialog("Data Saved Successfully",uiModeManager);
+                                showConfirmationDialog("Data Saved Successfully", uiModeManager);
                             }
                             Type listType = new TypeToken<List<SaveDateSupply>>() {
                             }.getType();
@@ -445,8 +453,9 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
             }
         });
     }
+
     private void GetDepotType() {
-        JSONObject jsonObject=new JSONObject();
+        JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("depot_code", userDataModel.mUserItems.get(0).mDepot_code);
 
@@ -462,9 +471,9 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
                         try {
                             JSONArray array = response.getJSONArray("depot_data");
                             depot_list.clear();
-                            depot_list.add(0,"Select Depot");
+                            depot_list.add(0, "Select Depot");
                             depot_id_list.clear();
-                            depot_id_list.add(0,"Select Depot");
+                            depot_id_list.add(0, "Select Depot");
                             for (int i = 0; i < array.length(); i++) {
                                 JSONObject obj = array.getJSONObject(i);
                                 depot_list.add(obj.getString("depot_code"));
@@ -488,10 +497,11 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
         requestQueue.add(objectRequest);
 
     }
+
     private void GetTrainType(String selectedDepot) {
-        JSONObject jsonObject=new JSONObject();
+        JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("depot_code",selectedDepot);
+            jsonObject.put("depot_code", selectedDepot);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -504,9 +514,9 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
                         try {
                             JSONArray array = response.getJSONArray("train_data");
                             train_list.clear();
-                            train_list.add(0,"Select Train");
+                            train_list.add(0, "Select Train");
                             train_id_list.clear();
-                            train_id_list.add(0,"Select Train");
+                            train_id_list.add(0, "Select Train");
                             for (int i = 0; i < array.length(); i++) {
                                 JSONObject obj = array.getJSONObject(i);
                                 train_list.add(obj.getString("train_no"));
@@ -521,7 +531,6 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
                         sp_train.setSelected(false);
 
 
-
                     }
                 },
                 new Response.ErrorListener() {
@@ -533,6 +542,7 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(objectRequest);
     }
+
     private void GetCoachType() {
         final JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, GET_COACH_TYPE, null,
                 new Response.Listener<JSONObject>() {
@@ -568,6 +578,7 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(FreshBedrollSupplytoAddDepot.this);
         requestQueue.add(objectRequest);
     }
+
     protected void showLoading(@NonNull String message0) {
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setMessage(message0);
@@ -575,12 +586,14 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
         mProgressDialog.setCancelable(false);
         mProgressDialog.show();
     }
+
     protected void hideLoading() {
         if (mProgressDialog != null) {
             mProgressDialog.dismiss();
         }
     }
-    public void showConfirmationDialog(String strMessage,UiModeManager uiModeManager) {
+
+    public void showConfirmationDialog(String strMessage, UiModeManager uiModeManager) {
         final Dialog dialog = new Dialog(FreshBedrollSupplytoAddDepot.this);
         dialog.setCancelable(false);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -589,9 +602,9 @@ public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
 
         TextView tvTitle = dialog.findViewById(R.id.confirmMessageTitle);
         TextView tvMessage = dialog.findViewById(R.id.tv_message);
-        if (uiModeManager.getNightMode()==UiModeManager.MODE_NIGHT_YES) {
-            tvTitle.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.whiteTextColor));
-            tvMessage.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.whiteTextColor));
+        if (uiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
+            tvTitle.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.whiteTextColor));
+            tvMessage.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.whiteTextColor));
         }
         tvMessage.setText(strMessage);
         TextView tvOk = dialog.findViewById(R.id.tv_ok);
