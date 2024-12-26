@@ -2,6 +2,7 @@ package com.example.laundrymanagementghy.Amodel;
 
 public class QanswerData1 {
     private String quest_id;
+    private String item_name;
     private String quantity;
     private String reason;
 
@@ -20,9 +21,17 @@ public class QanswerData1 {
     public String getQuest_id() {
         return quest_id;
     }
+public String getItem_name() {
+        return item_name;
+
+    }
 
     public QanswerData1 setQuestId(String quest_id) {
         this.quest_id = quest_id;
+        return this;
+    }
+    public QanswerData1 setItemName(String name) {
+        this.item_name = name;
         return this;
     }
 

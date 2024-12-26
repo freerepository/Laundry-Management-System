@@ -492,6 +492,7 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                 hideLoading();
                 try {
                     Log.e("responseAdd", response);
+                    Log.e("responserespo2", response);
                     JSONObject jsonResponse = null;
                     try {
                         jsonResponse = new JSONObject(response);
@@ -634,7 +635,8 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         srl.setRefreshing(false);
-                        Log.d("response_req", response);
+//                        Log.d("response_req", response);
+                        Log.e("responserespo1", response);
                         try {
                             SupplyList supplyList = new Gson().fromJson(response.toString(), SupplyList.class);
 
@@ -892,18 +894,82 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                     ) {
                                         Toast.makeText(ReceivedFromTrainActivity.this, "All Fields are mandatory", Toast.LENGTH_SHORT).show();
                                     } else {
-                                        if (Integer.parseInt(list.get(position).mBs) < Integer.parseInt(et_BedSheet.getText().toString())) {
-                                            Toast.makeText(ReceivedFromTrainActivity.this, "BedSheet to large", Toast.LENGTH_SHORT).show();
-                                        } else if (Integer.parseInt(list.get(position).mPillow) < Integer.parseInt(et_pillow.getText().toString())) {
-                                            Toast.makeText(ReceivedFromTrainActivity.this, "Pillow to large", Toast.LENGTH_SHORT).show();
-                                        } else if (Integer.parseInt(list.get(position).mPc) < Integer.parseInt(et_pillowCover.getText().toString())) {
-                                            Toast.makeText(ReceivedFromTrainActivity.this, "Pillow cover to large", Toast.LENGTH_SHORT).show();
-                                        } else if (Integer.parseInt(list.get(position).mBlanket) < Integer.parseInt(et_Blanket.getText().toString())) {
-                                            Toast.makeText(ReceivedFromTrainActivity.this, "Blanket to large", Toast.LENGTH_SHORT).show();
-                                        } else if (Integer.parseInt(list.get(position).mBlanket_cover) < Integer.parseInt(et_BlanketCover.getText().toString())) {
-                                            Toast.makeText(ReceivedFromTrainActivity.this, "Blanket cover to large", Toast.LENGTH_SHORT).show();
-                                        } else if (Integer.parseInt(list.get(position).mFt) < Integer.parseInt(et_FaceTowel.getText().toString())) {
-                                            Toast.makeText(ReceivedFromTrainActivity.this, "Hand Towel to large", Toast.LENGTH_SHORT).show();
+                                        int bedSheetValue = safeParseInt(et_BedSheet.getText().toString());
+                                        int unusedBedSheetValue = safeParseInt(et_unused_BedSheet.getText().toString());
+                                        int pillowValue = safeParseInt(et_pillow.getText().toString());
+                                        int unusedPillowValue = safeParseInt(et_unused_pillow.getText().toString());
+                                        int pillowCoverValue = safeParseInt(et_pillowCover.getText().toString());
+                                        int unusedPillowCoverValue = safeParseInt(et_unused_pillowCover.getText().toString());
+                                        int blanketValue = safeParseInt(et_Blanket.getText().toString());
+                                        int unusedBlanketValue = safeParseInt(et_unused_Blanket.getText().toString());
+                                        int blanketCoverValue = safeParseInt(et_BlanketCover.getText().toString());
+                                        int unusedBlanketCoverValue = safeParseInt(et_unused_BlanketCover.getText().toString());
+                                        int faceTowelValue = safeParseInt(et_FaceTowel.getText().toString());
+                                        int unusedFaceTowelValue = safeParseInt(et_unused_FaceTowel.getText().toString());
+
+                                        // Retrieve list values safely
+                                        int listBedSheetValue = safeParseInt(list.get(position).mBs);
+                                        int listPillowValue = safeParseInt(list.get(position).mPillow);
+                                        int listPillowCoverValue = safeParseInt(list.get(position).mPc);
+                                        int listBlanketValue = safeParseInt(list.get(position).mBlanket);
+                                        int listBlanketCoverValue = safeParseInt(list.get(position).mBlanket_cover);
+                                        int listFaceTowelValue = safeParseInt(list.get(position).mFt);
+
+
+                                        if (listBedSheetValue < bedSheetValue ||
+                                                unusedBedSheetValue > subtractValues(listBedSheetValue, bedSheetValue)) {
+
+                                            if (listBedSheetValue < bedSheetValue) {
+                                                Toast.makeText(getApplicationContext(), "BedSheet value is too large", Toast.LENGTH_SHORT).show();
+                                            } else {
+                                                Toast.makeText(getApplicationContext(), "Unused BedSheet value is too large", Toast.LENGTH_SHORT).show();
+                                            }
+
+                                        } else if (listPillowValue < pillowValue ||
+                                                unusedPillowValue > subtractValues(listPillowValue, pillowValue)) {
+
+                                            if (listPillowValue < pillowValue) {
+                                                Toast.makeText(getApplicationContext(), "Pillow value is too large", Toast.LENGTH_SHORT).show();
+                                            } else {
+                                                Toast.makeText(getApplicationContext(), "Unused Pillow value is too large", Toast.LENGTH_SHORT).show();
+                                            }
+
+                                        } else if (listPillowCoverValue < pillowCoverValue ||
+                                                unusedPillowCoverValue > subtractValues(listPillowCoverValue, pillowCoverValue)) {
+
+                                            if (listPillowCoverValue < pillowCoverValue) {
+                                                Toast.makeText(getApplicationContext(), "Pillow Cover value is too large", Toast.LENGTH_SHORT).show();
+                                            } else {
+                                                Toast.makeText(getApplicationContext(), "Unused Pillow Cover value is too large", Toast.LENGTH_SHORT).show();
+                                            }
+
+                                        } else if (listBlanketValue < blanketValue ||
+                                                unusedBlanketValue > subtractValues(listBlanketValue, blanketValue)) {
+
+                                            if (listBlanketValue < blanketValue) {
+                                                Toast.makeText(getApplicationContext(), "Blanket value is too large", Toast.LENGTH_SHORT).show();
+                                            } else {
+                                                Toast.makeText(getApplicationContext(), "Unused Blanket value is too large", Toast.LENGTH_SHORT).show();
+                                            }
+
+                                        } else if (listBlanketCoverValue < blanketCoverValue ||
+                                                unusedBlanketCoverValue > subtractValues(listBlanketCoverValue, blanketCoverValue)) {
+
+                                            if (listBlanketCoverValue < blanketCoverValue) {
+                                                Toast.makeText(getApplicationContext(), "Blanket Cover value is too large", Toast.LENGTH_SHORT).show();
+                                            } else {
+                                                Toast.makeText(getApplicationContext(), "Unused Blanket Cover value is too large", Toast.LENGTH_SHORT).show();
+                                            }
+
+                                        } else if (listFaceTowelValue < faceTowelValue ||
+                                                unusedFaceTowelValue > subtractValues(listFaceTowelValue, faceTowelValue)) {
+
+                                            if (listFaceTowelValue < faceTowelValue) {
+                                                Toast.makeText(getApplicationContext(), "Hand Towel value is too large", Toast.LENGTH_SHORT).show();
+                                            } else {
+                                                Toast.makeText(getApplicationContext(), "Unused Hand Towel value is too large", Toast.LENGTH_SHORT).show();
+                                            }
+
                                         } else {
 
                                             try {
@@ -921,12 +987,14 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                                         et_remark.getText().toString(),
 
                                                         //unused item
-                                                        et_unused_pillow.getText().toString(),
                                                         et_unused_BedSheet.getText().toString(),
+                                                        et_unused_pillow.getText().toString(),
                                                         et_unused_pillowCover.getText().toString(),
                                                         et_unused_FaceTowel.getText().toString(),
                                                         et_unused_BlanketCover.getText().toString(),
-                                                        et_unused_Blanket.getText().toString());//ok
+                                                        et_unused_Blanket.getText().toString()
+
+                                                );//ok
 
 
                                             } catch (Exception e) {
@@ -935,6 +1003,20 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                         }
                                     }
 
+                                }
+                                private int safeParseInt(String value) {
+                                    if (value == null || value.trim().isEmpty()) {
+                                        return 0;
+                                    } else {
+                                        try {
+                                            return Integer.parseInt(value.trim());
+                                        } catch (NumberFormatException e) {
+                                            return 0;
+                                        }
+                                    }
+                                }
+                                private int subtractValues(int mbs, int bedsheet) {
+                                    return mbs - bedsheet;
                                 }
 
                             });
@@ -1009,9 +1091,9 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             String upillow,
                             String upillocover,
                             String ufacetowel,
-                            String ublanket,
-                            String ublanketcover
-                    ) {
+                            String ublanketcover,
+                            String ublanket
+                            ) {
 
                         final JSONObject jsonObject = new JSONObject();
                         try {
@@ -1024,7 +1106,7 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             jsonObject.put("pillow_return", pillow);
                             jsonObject.put("pc_return", pc);
                             jsonObject.put("ft_return", ft);
-                            jsonObject.put("blk_return", blanket);
+                            jsonObject.put("blk_return", blanket_cover);
                             jsonObject.put("blanket_return", blanket);
                             jsonObject.put("bathtowel_return", "");
                             jsonObject.put("remark", remark);
@@ -1395,16 +1477,95 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             dialog.findViewById(R.id.v_positive).setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    if (Integer.parseInt(list.get(position).mBs) < Integer.parseInt(et_BedSheet.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
-                                    } else if (Integer.parseInt(list.get(position).mFt) < Integer.parseInt(et_FaceTowel.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
-                                    } else if (Integer.parseInt(list.get(position).mBlanket_cover) < Integer.parseInt(et_BlanketCover.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
-                                    } /*else if (Integer.parseInt(list.get(position).mBath_towel) < Integer.parseInt(et_BathTowel.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
-                                    } */ else if (Integer.parseInt(list.get(position).mBlanket) < Integer.parseInt(et_Blanket.getText().toString())) {
-                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
+//                                    if (Integer.parseInt(list.get(position).mBs) < Integer.parseInt(et_BedSheet.getText().toString())) {
+//                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
+//                                    } else if (Integer.parseInt(list.get(position).mFt) < Integer.parseInt(et_FaceTowel.getText().toString())) {
+//                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
+//                                    } else if (Integer.parseInt(list.get(position).mBlanket_cover) < Integer.parseInt(et_BlanketCover.getText().toString())) {
+//                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
+//                                    } /*else if (Integer.parseInt(list.get(position).mBath_towel) < Integer.parseInt(et_BathTowel.getText().toString())) {
+//                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
+//                                    } */ else if (Integer.parseInt(list.get(position).mBlanket) < Integer.parseInt(et_Blanket.getText().toString())) {
+//                                        Toast.makeText(ReceivedFromTrainActivity.this, "Invalid Value", Toast.LENGTH_SHORT).show();
+//
+//
+
+                                    int bedSheetValue = safeParseInt(et_BedSheet.getText().toString());
+                                    int unusedBedSheetValue = safeParseInt(et_unused_BedSheet.getText().toString());
+                                    int pillowValue = safeParseInt(et_pillow.getText().toString());
+                                    int unusedPillowValue = safeParseInt(et_unused_pillow.getText().toString());
+                                    int pillowCoverValue = safeParseInt(et_pillowCover.getText().toString());
+                                    int unusedPillowCoverValue = safeParseInt(et_unused_pillowCover.getText().toString());
+                                    int blanketValue = safeParseInt(et_Blanket.getText().toString());
+                                    int unusedBlanketValue = safeParseInt(et_unused_Blanket.getText().toString());
+                                    int blanketCoverValue = safeParseInt(et_BlanketCover.getText().toString());
+                                    int unusedBlanketCoverValue = safeParseInt(et_unused_BlanketCover.getText().toString());
+                                    int faceTowelValue = safeParseInt(et_FaceTowel.getText().toString());
+                                    int unusedFaceTowelValue = safeParseInt(et_unused_FaceTowel.getText().toString());
+
+                                    // Retrieve list values safely
+                                    int listBedSheetValue = safeParseInt(list.get(position).mBs);
+                                    int listPillowValue = safeParseInt(list.get(position).mPillow);
+                                    int listPillowCoverValue = safeParseInt(list.get(position).mPc);
+                                    int listBlanketValue = safeParseInt(list.get(position).mBlanket);
+                                    int listBlanketCoverValue = safeParseInt(list.get(position).mBlanket_cover);
+                                    int listFaceTowelValue = safeParseInt(list.get(position).mFt);
+
+
+                                    if (listBedSheetValue < bedSheetValue ||
+                                            unusedBedSheetValue > subtractValues(listBedSheetValue, bedSheetValue)) {
+
+                                        if (listBedSheetValue < bedSheetValue) {
+                                            Toast.makeText(getApplicationContext(), "BedSheet value is too large", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "Unused BedSheet value is too large", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                    } else if (listPillowValue < pillowValue ||
+                                            unusedPillowValue > subtractValues(listPillowValue, pillowValue)) {
+
+                                        if (listPillowValue < pillowValue) {
+                                            Toast.makeText(getApplicationContext(), "Pillow value is too large", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "Unused Pillow value is too large", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                    } else if (listPillowCoverValue < pillowCoverValue ||
+                                            unusedPillowCoverValue > subtractValues(listPillowCoverValue, pillowCoverValue)) {
+
+                                        if (listPillowCoverValue < pillowCoverValue) {
+                                            Toast.makeText(getApplicationContext(), "Pillow Cover value is too large", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "Unused Pillow Cover value is too large", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                    } else if (listBlanketValue < blanketValue ||
+                                            unusedBlanketValue > subtractValues(listBlanketValue, blanketValue)) {
+
+                                        if (listBlanketValue < blanketValue) {
+                                            Toast.makeText(getApplicationContext(), "Blanket value is too large", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "Unused Blanket value is too large", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                    } else if (listBlanketCoverValue < blanketCoverValue ||
+                                            unusedBlanketCoverValue > subtractValues(listBlanketCoverValue, blanketCoverValue)) {
+
+                                        if (listBlanketCoverValue < blanketCoverValue) {
+                                            Toast.makeText(getApplicationContext(), "Blanket Cover value is too large", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "Unused Blanket Cover value is too large", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                    } else if (listFaceTowelValue < faceTowelValue ||
+                                            unusedFaceTowelValue > subtractValues(listFaceTowelValue, faceTowelValue)) {
+
+                                        if (listFaceTowelValue < faceTowelValue) {
+                                            Toast.makeText(getApplicationContext(), "Hand Towel value is too large", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "Unused Hand Towel value is too large", Toast.LENGTH_SHORT).show();
+                                        }
+
                                     } else {
                                         try {
                                             EditDataSave(
@@ -1421,8 +1582,8 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                                     et_Blanket.getText().toString(),//ok
                                                     et_remark.getText().toString(),
 
-                                                    et_unused_pillow.getText().toString(),
                                                     et_unused_BedSheet.getText().toString(),
+                                                    et_unused_pillow.getText().toString(),
                                                     et_unused_pillowCover.getText().toString(),
                                                     et_unused_FaceTowel.getText().toString(),
                                                     et_unused_BlanketCover.getText().toString(),
@@ -1436,6 +1597,22 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                                             e.printStackTrace();
                                         }
                                     }
+                                }
+
+                                private int safeParseInt(String value) {
+                                    if (value == null || value.trim().isEmpty()) {
+                                        return 0; // Default value or handle as needed
+                                    } else {
+                                        try {
+                                            return Integer.parseInt(value.trim());
+                                        } catch (NumberFormatException e) {
+                                            return 0; // Default value or handle as needed
+                                        }
+                                    }
+                                }
+
+                                private int subtractValues(int mbs, int bedsheet) {
+                                    return mbs - bedsheet;
                                 }
 
                             });
@@ -1505,8 +1682,8 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             String upillow,
                             String upillocover,
                             String ufacetowel,
-                            String ublanket,
-                            String ublanketcover
+                            String ublanketcover,
+                            String ublanket
                     ) {
 
                         final JSONObject jsonObject = new JSONObject();
@@ -1516,22 +1693,24 @@ public class ReceivedFromTrainActivity extends AppCompatActivity {
                             jsonObject.put("date", date);
                             jsonObject.put("laundry_id", laundryId); //yaha check karana dobara
                             jsonObject.put("depot_code", userDataModel.mUserItems.get(0).mDepot_code);
+
                             jsonObject.put("bs_return", bs);
                             jsonObject.put("pillow_return", pillow);
+
                             jsonObject.put("pc_return", pc);
                             jsonObject.put("ft_return", ft);
-                            jsonObject.put("blk_return", blanket);
+
                             jsonObject.put("blanket_return", blanket);
+                            jsonObject.put("blk_return", blanket);
                             jsonObject.put("bathtowel_return", "");
                             jsonObject.put("remark", remark);
 
-                            jsonObject.put("bs_unused", ubs);
-                            jsonObject.put("pillow_unused", upillow);
-                            jsonObject.put("pc_unused", upillocover);
-                            jsonObject.put("blanket_unused", ublanket);
-                            jsonObject.put("blc_unused", ublanketcover);
-                            jsonObject.put("ht_unused", ufacetowel);
-
+                            jsonObject.put("bs_unused", ubs.isEmpty() ? "0" : ubs);
+                            jsonObject.put("pillow_unused", upillow.isEmpty() ? "0" : upillow);
+                            jsonObject.put("pc_unused", upillocover.isEmpty() ? "0" : upillocover);
+                            jsonObject.put("blanket_unused", ublanket.isEmpty() ? "0" : ublanket);
+                            jsonObject.put("blc_unused", ublanketcover.isEmpty() ? "0" : ublanketcover);
+                            jsonObject.put("ht_unused", ufacetowel.isEmpty() ? "0" : ufacetowel);
 
                         } catch (Exception e) {
                             e.printStackTrace();

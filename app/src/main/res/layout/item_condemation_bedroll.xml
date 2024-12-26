@@ -64,6 +64,7 @@
         android:gravity="center"
         android:textSize="13sp"
         android:maxLength="13"
+        style="@style/textBothBlack"
         android:background="@drawable/shape_outline"
         android:autofillHints=""
         android:inputType="number"
@@ -77,6 +78,7 @@
         android:layout_weight="3"
         android:layout_margin="2dp"
         android:gravity="center"
+        style="@style/text"
         android:background="@drawable/shape_outline"/>
 
 

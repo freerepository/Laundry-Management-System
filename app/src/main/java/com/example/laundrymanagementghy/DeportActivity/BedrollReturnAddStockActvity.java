@@ -157,6 +157,17 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
         submit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+            //            public void onClick(View v) {
+//                for (Map.Entry<String, QanswerData1> entry : qmap.entrySet()) {
+//                    String key = entry.getKey();
+//                    QanswerData1 value = entry.getValue();
+//                    Log.d("QMapDebug", "Key: " + key + ", Value: " + value.toString());
+//                }
+//            }
+
+
+
             @Override
             public void onClick(View v) {
                 if (qmap.size() == 0) {
@@ -190,7 +201,7 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
                         jsonObject.put("depot_code", userdataModel.mUserItems.get(0).mDepot_code);
                         jsonObject.put("laundry_id", depot_id_list.get(sp_depot.getSelectedItemPosition()));
                         jsonObject.put("date", et_date.getText().toString());
-                        jsonObject.put("received_from", "laundry");
+                        jsonObject.put("received_from", "laundry");// STATIC
                         jsonObject.put("signature", signatureresponse1);
                         jsonObject.put("storeData", jsonArray);
                         requestBody = jsonObject.toString();
@@ -257,6 +268,7 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
                     requestQueue.add(stringRequest);
                 }
             }
+
         });
 
 
@@ -307,7 +319,7 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
             }
         });
         GetStoreType();
-        callTab();
+//        callTab();
         depotList.add(0, "Select Laundry");
         depotAdapter = new ArrayAdapter<String>(BedrollReturnAddStockActvity.this, android.R.layout.simple_spinner_dropdown_item, depotList);
         sp_depot.setAdapter(depotAdapter);
@@ -339,12 +351,13 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
         srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 if (queStoreModel == null) {
                 } else if (adapter == null || adapter.list == null || adapter.list.length() == 0) {
-                    callTab2();
+//                    callTab2();
                 } else {
                     srl.setRefreshing(false);
                 }
@@ -356,36 +369,36 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
 
     }
 
-    private void callTab() {
-        srl.setRefreshing(true);
-        JSONObject object = new JSONObject();
-
-        srl.setRefreshing(true);
-        JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, storequestionAPI, object,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        srl.setRefreshing(false);
-                        Log.e("question_response", "" + response);
-                        try {
-                            questionArray = response.getJSONArray("laundry_items");
-                            adapter.list = questionArray;
-                            recyclerView.setAdapter(adapter);
-//                            adapter.notifyDataSetChanged();
-
-                        } catch (Exception e) {
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                srl.setRefreshing(false);
-            }
-        });
-        RequestQueue requestQueue1 = Volley.newRequestQueue(this);
-        requestQueue1.add(objectRequest);
-    }
+//    private void callTab() {
+//        srl.setRefreshing(true);
+//        JSONObject object = new JSONObject();
+//
+//        srl.setRefreshing(true);
+//        JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, storequestionAPI, object,
+//                new Response.Listener<JSONObject>() {
+//                    @Override
+//                    public void onResponse(JSONObject response) {
+//                        srl.setRefreshing(false);
+//                        Log.e("question_response", "" + response);
+//                        try {
+//                            questionArray = response.getJSONArray("laundry_items");
+//                            adapter.list = questionArray;
+//                            recyclerView.setAdapter(adapter);
+////                            adapter.notifyDataSetChanged();
+//
+//                        } catch (Exception e) {
+//                        }
+//
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                srl.setRefreshing(false);
+//            }
+//        });
+//        RequestQueue requestQueue1 = Volley.newRequestQueue(this);
+//        requestQueue1.add(objectRequest);
+//    }
     private void callTab2() {
         JSONObject object = new JSONObject();
         try {
@@ -395,9 +408,6 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
 //            Toast.makeText(this, "id is "+depot_id_list.get(sp_depot.getSelectedItemPosition()), Toast.LENGTH_SHORT).show();
 //            Toast.makeText(this, "code "+userdataModel.mUserItems.get(0).mDepot_code, Toast.LENGTH_SHORT).show();
             srl.setRefreshing(true);
-
-//            object.put("laundry_id","6");
-//            object.put("depot_code", "GHY");
 
         } catch (JSONException e) {
             srl.setRefreshing(false);
@@ -473,8 +483,8 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
         public SupplyCondAddBsradapter(JSONArray list, Context context) {
             this.context = context;
             this.list = list;
-            initializeReasonList(); // Initialize the reason list with default values
-            fetchReasons(); // Fetch reasons once during initialization
+            initializeReasonList();
+            fetchReasons();
         }
 
         @NonNull
@@ -520,6 +530,7 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
                             holder.tv_ques.setText(jsonObject.getString("item_name"));
                             holder.tv_item_qty.setText(String.valueOf(jsonObject.optInt("buffer_received")));
 
+
 //                            adapter.notifyDataSetChanged();
                             String ques_id = jsonObject.getString("id");
                             QanswerData1 qanswerData = qmap.get(ques_id);
@@ -533,6 +544,8 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
                                         .setBuffer(jsonObject.optInt("buffer_received"))
                                         .setReason(selectedItem);
                                 itemSelect(newQanswerData);
+
+
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -547,8 +560,9 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
                         srl.setRefreshing(false);
                     }
                 });
-
+                holder.sp_item.setBackgroundColor(getColor(R.color.black));
                 for (QanswerData1 qanswerData : qmap.values()) {
+                    Toast.makeText(context, ""+qanswerData.getQuest_id(), Toast.LENGTH_SHORT).show();
                     if (qanswerData.getQuest_id().equalsIgnoreCase(jsonObject.getString("id"))) {
                         holder.et_quantity.setText(qanswerData.getQuantity());
                         int position1 = reason_list.indexOf(qanswerData.getReason());
@@ -569,37 +583,28 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
                     @Override
                     public void afterTextChanged(Editable editable) {
                         if (jsonObject == null) {
-                            // Handle the case where jsonObject is null
                             submit.setEnabled(false);
                             return;
                         }
-
-                        // Get buffer_received value safely
                         int myApiValue = jsonObject.optInt("buffer_received", -1); // Default to 0 if key is missing
-
                         String reason = holder.sp_item.getSelectedItem() != null ? holder.sp_item.getSelectedItem().toString().trim() : "0"; // Default value if null
-
-                        // Try parsing reason to int
                         int reasonValue = 0;
                         try {
                             reasonValue = Integer.parseInt(reason);
                         } catch (NumberFormatException e) {
                             e.printStackTrace();
-                            // Show error or handle gracefully
                         }
 
                         shortfall_focus_position = position;
 
-                        // Get the quantity entered in EditText and handle empty input
                         String quantityStr = editable.toString().trim();
-                        int enteredQuantity = 0; // Default value if empty
+                        int enteredQuantity = 0;
                         if (!quantityStr.isEmpty()) {
                             try {
                                 enteredQuantity = Integer.parseInt(quantityStr);
                             } catch (NumberFormatException e) {
                                 e.printStackTrace();
                                 srl.setRefreshing(false);
-                                // Handle invalid input gracefully
                             }finally {
                                 srl.setRefreshing(false);
 
@@ -624,7 +629,6 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
                             } catch (Exception e) {
                                 e.printStackTrace();
                                 srl.setRefreshing(false);
-
                             }
                         }
                     }
@@ -734,6 +738,7 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
 
         public void itemSelect(QanswerData1 qanswerData) {
             qmap.put(qanswerData.getQuest_id(), qanswerData);
+            Toast.makeText(context, "Item", Toast.LENGTH_SHORT).show();
 //            notifyDataSetChanged();
             Log.d("ItemSelect", "qmap size: " + qmap.size());
             Log.d("ItemSelect", "Item: " + qanswerData.getQuest_id() + ", Quantity: " + qanswerData.getQuantity() + ", Reason: " + qanswerData.getReason());

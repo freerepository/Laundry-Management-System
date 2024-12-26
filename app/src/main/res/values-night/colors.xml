@@ -2,4 +2,38 @@
 <resources>
     <color name="background_color">#000000</color> <!-- Dark background (black) -->
     <color name="text_color">#FFFFFF</color> <!-- Light text (white) -->
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#551B17</color>
+    <color name="colorAccent">#1485E8</color>
+    <color name="colorGreen">#24CF2B</color>
+    <color name="colorGray">#696969</color>
+
+    <color name="themeColor">#B90A00</color>
+    <color name="background">#FFECEA</color>
+    <color name="colorOrange">#FF5722</color>
+    <!--normal colors-->
+    <color name="colorBlue1">#0B0BB6</color>
+    <color name="darkTextColor">#020000</color>
+    <color name="colorBlueDark">#F49836</color>
+    <color name="contentTextColor">#020000</color>
+    <color name="darkblack">#545454</color>
+    <color name="register_bk_color">#E01F60</color>
+    <color name="login_bk_color">#F8EBE6</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#C21F81</color>
+    <color name="colorBackground">#E9F1F9</color>
+    <color name="colorBackground2">#CEDFF1</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorRed">#F30909</color>
+    <color name="topbar_color">#ffffff</color>
+    <color name="btn_drawable">#FF0000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="hint_color">#838383</color>
+    <color name="semi">#96000000</color>
+    <color name="colorBG">#E8E8E8</color>
+    <color name="colorHint">#818181</color>
+    <color name="color_dialog_bg">#80000000</color>
+
+
 </resources>

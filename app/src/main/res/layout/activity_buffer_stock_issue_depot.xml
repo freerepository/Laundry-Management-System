@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/shape"
+            style="@style/border"
             android:layout_marginRight="5dp"
             android:gravity="center"
             android:orientation="horizontal">
@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/shape"
+            style="@style/border"
             android:gravity="center"
             android:orientation="horizontal">
             <View
@@ -290,7 +290,8 @@
                     android:id="@+id/buffer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone" />
+                    tools:listitem="@layout/row_buffer_list"
+                    android:visibility="visible" />
             </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
             <TextView
                 android:id="@+id/tv_empty_data"
