@@ -1,12 +1,5 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -31,6 +24,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -64,12 +64,12 @@ import java.util.List;
 import java.util.Locale;
 
 public class SendToLaundryActivity extends AppCompatActivity {
-    private final static String Getlaundrylist = "http://lmsguwahati.projectrailway.in/Api/depot_sent_to_laundry";
-    private final static String Save_Laundry = "http://lmsguwahati.projectrailway.in/Api/save_sent_to_laundry";
-    private final static String Laundry_Type = "http://lmsguwahati.projectrailway.in/Api/get_all_laundry";
-    private final static String GET_COACH_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_coach";
-    private final static String Train_List = "http://lmsguwahati.projectrailway.in/Api/get_trains";
-    private final static String Update_API = "http://lmsguwahati.projectrailway.in/Api/save_sent_to_laundry";
+    private final static String Getlaundrylist = "http://lmskyq.projectrailway.in/Api/depot_sent_to_laundry";
+    private final static String Save_Laundry = "http://lmskyq.projectrailway.in/Api/save_sent_to_laundry";
+    private final static String Laundry_Type = "http://lmskyq.projectrailway.in/Api/get_all_laundry";
+    private final static String GET_COACH_TYPE = "http://lmskyq.projectrailway.in/Api/get_coach";
+    private final static String Train_List = "http://lmskyq.projectrailway.in/Api/get_trains";
+    private final static String Update_API = "http://lmskyq.projectrailway.in/Api/save_sent_to_laundry";
     ImageView iv_add_laundry;
     TextView tv_empty_data;
     RecyclerView recyclerView;

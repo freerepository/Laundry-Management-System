@@ -1,12 +1,5 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +16,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -44,13 +44,13 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class TestCheckDepotActivity extends AppCompatActivity {
-    private final static String get_Testcheck_API = "http://lmsguwahati.projectrailway.in/Api/get_testcheck";
-    private final static String update_testcheck_status = "http://lmsguwahati.projectrailway.in/Api/update_testcheck_status";
+    private final static String get_Testcheck_API = "http://lmskyq.projectrailway.in/Api/get_testcheck";
+    private final static String update_testcheck_status = "http://lmskyq.projectrailway.in/Api/update_testcheck_status";
     ImageView v_add_test_check;
     TextView tv_empty_data;
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
-    String  depot_code="";
+    String depot_code = "";
     AlertDialog dialog;
     TestAapter testAapter;
     UserDataModel userdataModel;

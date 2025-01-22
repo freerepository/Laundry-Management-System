@@ -1,10 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity.PenaltyScreens;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.DatePickerDialog;
 import android.app.UiModeManager;
 import android.content.Intent;
@@ -18,14 +13,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.DeportActivity.PanaltyUpdateScreen.Depot_PanaltyAddScreen;
-import com.example.laundrymanagementghy.DeportActivity.PanaltyUpdateScreen.PanaltyAdapter;
 import com.example.laundrymanagementghy.DeportActivity.PanaltyUpdateScreen.PenaltyViewModelClass;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.util.O;
@@ -42,8 +40,8 @@ import java.util.Date;
 import java.util.Locale;
 
 public class LaundryPenltryScreenActivity extends AppCompatActivity {
-//    private final static String STOCKDATA_list = "http://lmsguwahati.projectrailway.in/api/getmissingPenaltyData";
-    private final static String STOCKDATA_list = "http://lmsguwahati.projectrailway.in/api/getPenaltyData";
+    //    private final static String STOCKDATA_list = "http://lmsguwahati.projectrailway.in/api/getmissingPenaltyData";
+    private final static String STOCKDATA_list = "http://lmskyq.projectrailway.in/api/getPenaltyData";
 
     private ImageView v_add_buffer;
     RecyclerView recyclerView;

@@ -5,6 +5,18 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -13,46 +25,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Activity.FragmentModel.FragmentModel;
-import com.example.laundrymanagementghy.Activity.FragmentModel.FragmentModel2;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.Bmodel.GetCondemendList;
 import com.example.laundrymanagementghy.DeportActivity.BedrollReturntoLaundrytFromBufferStockActivity;
-import com.example.laundrymanagementghy.LaundryActivity.CondemnedBedrollActivity;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 
 public class FirstFragment extends Fragment {
-    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/LaundryStockSummary";
+    private final static String BEDROLL_API = "http://lmskyq.projectrailway.in/api/LaundryStockSummary";
 //    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/LaundryStockSummary";
 
     TextView tv_empty_data;

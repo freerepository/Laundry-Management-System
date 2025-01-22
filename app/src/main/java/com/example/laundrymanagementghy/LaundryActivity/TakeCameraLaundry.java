@@ -1,9 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -25,6 +21,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -58,14 +58,14 @@ import java.util.Locale;
 import java.util.Map;
 
 public class TakeCameraLaundry extends AppCompatActivity {
-    public final static String STORING_Image = "http://lmsguwahati.projectrailway.in/Api/upload_image";
-    public final static String STORING_Sing = "http://lmsguwahati.projectrailway.in/Api/upload_signature";
-    public final static String SubmitTestCheckData = "http://lmsguwahati.projectrailway.in/Api/save_testcheck";
+    public final static String STORING_Image = "http://lmskyq.projectrailway.in/Api/upload_image";
+    public final static String STORING_Sing = "http://lmskyq.projectrailway.in/Api/upload_signature";
+    public final static String SubmitTestCheckData = "http://lmskyq.projectrailway.in/Api/save_testcheck";
 
     Button btnsubmit;
     RequestQueue rQueue;
     String message;
-    boolean isSubmited=false;
+    boolean isSubmited = false;
     private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100;
     private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE2 = 400;
     private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE3 = 101;

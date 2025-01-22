@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -26,9 +23,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.LaundryActivity.BedrollStockViewActivity;
 import com.example.laundrymanagementghy.R;
-//import com.example.laundrymanagementghy.model.GetStockView;
 import com.example.laundrymanagementghy.model.GetStockView2;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
@@ -42,7 +37,7 @@ public class BedrollReturntViewStockActivity extends AppCompatActivity {
 //    private final static String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/getStockDataItems";
 //    private final static String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/get_bedroll_return_Items";
 //    private final static String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/get_bedroll_condemnation_Items";
-    private final static String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/get_bedroll_return_Items";
+private final static String STOCKDATA_VIEW = "http://lmskyq.projectrailway.in/api/get_bedroll_return_Items";
 //    private final static String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/get_bedroll_return_Items";
 //    private final static String BEDROLL_API = "";
 

@@ -1,9 +1,5 @@
 package com.example.laundrymanagementghy.OfficerActivity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -27,6 +23,10 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -53,21 +53,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OfficerLogin extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
-    public final static String submitofficer = "http://lmsguwahati.projectrailway.in/Api/save_officer_penalty";
-    private final static String DESIGNATION_API = "http://lmsguwahati.projectrailway.in/Api/officerDesignation";
-    private final static String GRADE_API = "http://lmsguwahati.projectrailway.in/Api/officerGrade";
-    private final static String LAUNDRY_API = "http://lmsguwahati.projectrailway.in/Api/get_all_laundry";
-    private final static String GET_DEPOT_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_depots";
+    public final static String submitofficer = "http://lmskyq.projectrailway.in/Api/save_officer_penalty";
+    private final static String DESIGNATION_API = "http://lmskyq.projectrailway.in/Api/officerDesignation";
+    private final static String GRADE_API = "http://lmskyq.projectrailway.in/Api/officerGrade";
+    private final static String LAUNDRY_API = "http://lmskyq.projectrailway.in/Api/get_all_laundry";
+    private final static String GET_DEPOT_TYPE = "http://lmskyq.projectrailway.in/Api/get_depots";
 
     ImageView vlogout;
-    Spinner sp_designation,sp_grade,sp_laundry,sp_selectdepot;
+    Spinner sp_designation, sp_grade, sp_laundry, sp_selectdepot;
     RadioGroup radioGroup;
-    RadioButton r1,r2,r3,r4;
-    EditText remark,amount;
+    RadioButton r1, r2, r3, r4;
+    EditText remark, amount;
     Button submit;
-    String designation, grade,laundry,depot;
+    String designation, grade, laundry, depot;
     TextView tvUsername;
-    String amnt,remARK;
+    String amnt, remARK;
     String requestBody;
     String selection;
     String message;

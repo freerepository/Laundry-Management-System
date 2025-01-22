@@ -1,16 +1,9 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.UiModeManager;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -27,11 +20,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
@@ -40,7 +37,6 @@ import com.example.laundrymanagementghy.model.GetStockModel;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
@@ -52,7 +48,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class BedrollStocking extends AppCompatActivity {
-    private final static String STOCKDATA_list = "http://lmsguwahati.projectrailway.in/api/getStockData";
+    private final static String STOCKDATA_list = "http://lmskyq.projectrailway.in/api/getStockData";
 
     ImageView iv_add_supply;
     TextView tv_tittle, tv_empty_data;

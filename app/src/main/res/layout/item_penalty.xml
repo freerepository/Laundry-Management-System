@@ -47,6 +47,7 @@
         android:textSize="13sp"
         android:maxLength="13"
         android:id="@+id/et_amount"
+        style="@style/textBothBlack"
         android:background="@drawable/shape_outline"
         android:autofillHints=""
         android:inputType="number"

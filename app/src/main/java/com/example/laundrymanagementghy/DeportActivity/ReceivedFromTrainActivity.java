@@ -1,13 +1,5 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.UiModeManager;
@@ -34,6 +26,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -44,15 +44,11 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.EditReceived;
-
 import com.example.laundrymanagementghy.Amodel.SaveReceived;
 import com.example.laundrymanagementghy.Amodel.SoildedReturnToLaundryUpdateModel;
 import com.example.laundrymanagementghy.Amodel.SupplyList;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.LaundryActivity.BedrollStocking;
-import com.example.laundrymanagementghy.LaundryActivity.FreshBedrollReceiptfromLaundry;
 import com.example.laundrymanagementghy.R;
-import com.example.laundrymanagementghy.model.GetStockModel;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -72,13 +68,13 @@ import java.util.List;
 import java.util.Locale;
 
 public class ReceivedFromTrainActivity extends AppCompatActivity {
-    private final static String Received_from_train = "http://lmsguwahati.projectrailway.in/api/soiled_return_to_laundry";
-    private final static String Train_List = "http://lmsguwahati.projectrailway.in/Api/get_trains";
-    private final static String GET_COACH_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_coach";
-    private final static String ADD_RECEIVE_RROM_TRAIN = "http://lmsguwahati.projectrailway.in/Api/save_received_from_train";
-    private final static String Update_API = "http://lmsguwahati.projectrailway.in/api/save_soiled_return_to_laundry";
-    private final static String update_store_status = "http://lmsguwahati.projectrailway.in/api/verify_and_send_to_laundry";
-    private final static String LAUNDRY_API = "http://lmsguwahati.projectrailway.in/Api/get_all_laundry";
+    private final static String Received_from_train = "http://lmskyq.projectrailway.in/api/soiled_return_to_laundry";
+    private final static String Train_List = "http://lmskyq.projectrailway.in/Api/get_trains";
+    private final static String GET_COACH_TYPE = "http://lmskyq.projectrailway.in/Api/get_coach";
+    private final static String ADD_RECEIVE_RROM_TRAIN = "http://lmskyq.projectrailway.in/Api/save_received_from_train";
+    private final static String Update_API = "http://lmskyq.projectrailway.in/api/save_soiled_return_to_laundry";
+    private final static String update_store_status = "http://lmskyq.projectrailway.in/api/verify_and_send_to_laundry";
+    private final static String LAUNDRY_API = "http://lmskyq.projectrailway.in/Api/get_all_laundry";
     ImageView iv_add_received;
     TextView tv_empty_data;
     RecyclerView recyclerView;

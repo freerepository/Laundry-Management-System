@@ -1,9 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -15,6 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,7 +34,7 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 
 public class QrCodeScannerActivity extends AppCompatActivity {
-    private final static String update_delivery_status = "http://lmsguwahati.projectrailway.in/Api/update_deliveryStatus";
+    private final static String update_delivery_status = "http://lmskyq.projectrailway.in/Api/update_deliveryStatus";
 
     ImageView iv_qr_code,v_back;
     TextView tv_qr_code_scan;

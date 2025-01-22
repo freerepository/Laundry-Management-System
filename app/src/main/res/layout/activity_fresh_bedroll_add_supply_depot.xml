@@ -70,7 +70,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@drawable/shape">
+                        style="@style/border">
 
                         <EditText
                             android:id="@+id/et_date"
@@ -87,8 +87,7 @@
                             android:fontFamily="sans-serif"
                             android:hint="Select Date"
                             android:maxLines="1"
-                            android:textColor="@color/black"
-                            android:textColorHint="@color/black"
+                            style="@style/text"
                             android:textSize="15dp" />
                         <ImageView
                             android:id="@+id/ic_calender"
@@ -112,7 +111,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
-                android:background="@drawable/shape"
+                style="@style/border"
                 app:layout_constraintTop_toBottomOf="@+id/ll_uid">
 
                 <Spinner
@@ -143,7 +142,7 @@
                     android:spinnerMode="dropdown"
                     android:gravity="center"
                     android:textSize="15sp"
-                    android:background="@drawable/shape"
+                    style="@style/border"
                     />
                 <Spinner
                     android:id="@+id/sp_select_coach"
@@ -155,7 +154,7 @@
                     android:layout_marginLeft="0dp"
                     android:spinnerMode="dropdown"
                     android:gravity="center"
-                    android:background="@drawable/shape"
+                    style="@style/border"
                     />
             </LinearLayout>
 
@@ -185,7 +184,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginVertical="@dimen/_8sdp"
                             android:text="Number of Bags "
-                            android:textColor="@color/black"
+                            style="@style/text"
                             android:textSize="15sp"
                             app:tint="@color/colorWhite" />
                     </LinearLayout>
@@ -194,7 +193,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
                         android:layout_centerVertical="true"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:gravity="center"
                         android:hint="number of bags"
                         android:layout_marginRight="12dp"
@@ -217,7 +216,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:text="Bed Sheet"
-                        android:textColor="@color/black"
+                        style="@style/text"
                         android:textSize="15sp"
                         app:tint="@color/colorWhite" />
 
@@ -226,7 +225,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="32sp"
                         android:layout_centerVertical="true"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:gravity="center"
                         android:hint="bed sheet"
                         android:inputType="number"
@@ -265,7 +264,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginVertical="@dimen/_8sdp"
                             android:text="Pillow"
-                            android:textColor="@color/black"
+                            style="@style/text"
                             android:textSize="15sp"
                             app:tint="@color/colorWhite" />
                     </LinearLayout>
@@ -279,7 +278,7 @@
                         android:inputType="number"
                         android:textSize="14sp"
                         android:gravity="center"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:textColorHint="@color/colorHint"
                         android:hint="Pillow"
                         android:textColor="@android:color/black"
@@ -305,7 +304,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginVertical="@dimen/_8sdp"
                             android:text="Pillow Cover"
-                            android:textColor="@color/black"
+                            style="@style/text"
                             android:textSize="15sp"
                             app:tint="@color/colorWhite" />
                     </LinearLayout>
@@ -315,7 +314,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
                         android:layout_centerVertical="true"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:gravity="center"
                         android:hint="pillow cover"
                         android:inputType="number"
@@ -353,7 +352,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginVertical="@dimen/_8sdp"
                             android:text="Blanket"
-                            android:textColor="@color/black"
+                            style="@style/text"
                             android:textSize="15sp"
                             app:tint="@color/colorWhite" />
                     </LinearLayout>
@@ -368,7 +367,7 @@
                         android:layout_marginRight="12dp"
                         android:textSize="14sp"
                         android:gravity="center"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:textColorHint="@color/colorHint"
                         android:hint="blankets"
                         android:textColor="@android:color/black"
@@ -395,7 +394,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginVertical="@dimen/_8sdp"
                             android:text="Blanket Cover"
-                            android:textColor="@color/black"
+                            style="@style/text"
                             android:textSize="15sp"
                             app:tint="@color/colorWhite" />
                     </LinearLayout>
@@ -409,7 +408,7 @@
                         android:inputType="number"
                         android:textSize="14sp"
                         android:gravity="center"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:textColorHint="@color/colorHint"
                         android:hint="blanket cover"
                         android:textColor="@android:color/black"
@@ -439,7 +438,7 @@
 <!--                        android:layout_height="wrap_content"-->
 <!--                        android:layout_marginVertical="@dimen/_8sdp"-->
 <!--                        android:text="Blanket Cover"-->
-<!--                        android:textColor="@color/black"-->
+            <!--                        style="@style/text"-->
 <!--                        android:textSize="15sp"-->
 <!--                        app:tint="@color/colorWhite" />-->
 <!--                    <EditText-->
@@ -451,7 +450,7 @@
 <!--                        android:layout_marginRight="12dp"-->
 <!--                        android:textSize="14sp"-->
 <!--                        android:gravity="center"-->
-<!--                        android:background="@drawable/shape"-->
+            <!--                        style="@style/border"-->
 <!--                        android:textColorHint="@color/colorHint"-->
 <!--                        android:hint="blanket cover"-->
 <!--                        android:textColor="@android:color/black"-->
@@ -471,7 +470,7 @@
 <!--                        android:layout_marginVertical="@dimen/_8sdp"-->
 <!--                        android:text="Bath Towel"-->
 
-<!--                        android:textColor="@color/black"-->
+            <!--                        style="@style/text"-->
 <!--                        android:textSize="15sp"-->
 <!--                        app:tint="@color/colorWhite" />-->
 <!--                    <EditText-->
@@ -482,7 +481,7 @@
 <!--                        android:inputType="number"-->
 <!--                        android:textSize="14sp"-->
 <!--                        android:gravity="center"-->
-<!--                        android:background="@drawable/shape"-->
+            <!--                        style="@style/border"-->
 <!--                        android:textColorHint="@color/colorHint"-->
 <!--                        android:hint="bath towel"-->
 <!--                        android:textColor="@android:color/black"-->
@@ -515,7 +514,7 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:text="Hand Towel"
                         android:textSize="15sp"
-                        android:textColor="@color/black"
+                        style="@style/text"
                         app:tint="@color/colorWhite"/>
                     <EditText
                         android:id="@+id/et_face_towel"
@@ -523,7 +522,7 @@
                         android:layout_height="32sp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="12dp"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:gravity="center"
                         android:hint="hand towel"
                         android:inputType="number"
@@ -553,7 +552,7 @@
                             android:layout_marginVertical="@dimen/_8sdp"
                             android:text="Total Packets"
                             android:textSize="15sp"
-                            android:textColor="@color/black"
+                            style="@style/text"
                             app:tint="@color/colorWhite"/>
                     </LinearLayout>
 
@@ -564,7 +563,7 @@
                         android:layout_height="32sp"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="2dp"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:gravity="center"
                         android:hint="total packets"
                         android:inputType="number"
@@ -594,7 +593,7 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:text="Remark:"
                         android:textSize="15sp"
-                        android:textColor="@color/black"
+                        style="@style/text"
                         app:tint="@color/colorWhite"/>
                     <EditText
                         android:id="@+id/et_remark"
@@ -608,7 +607,7 @@
                         android:textSize="14sp"
                         android:textColorHint="@color/colorHint"
                         android:textColor="@android:color/black"
-                        android:background="@drawable/shape"
+                        style="@style/border"
                         android:scrollHorizontally="false"
                         android:scrollbars="vertical" />
                     />

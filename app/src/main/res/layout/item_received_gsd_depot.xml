@@ -46,6 +46,7 @@
         android:gravity="center"
         android:textSize="13sp"
         android:maxLength="13"
+        style="@style/textBothBlack"
         android:id="@+id/et_quantity"
         android:background="@drawable/shape_outline"
         android:autofillHints=""

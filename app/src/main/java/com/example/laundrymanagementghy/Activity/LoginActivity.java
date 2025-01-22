@@ -1,14 +1,7 @@
 package com.example.laundrymanagementghy.Activity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
-
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -17,19 +10,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.DeportActivity.DeportDashboard;
 import com.example.laundrymanagementghy.DeportActivity.PanaltyUpdateScreen.Depot_PanaltyScreen;
-import com.example.laundrymanagementghy.LaundryActivity.LaundryDashboard;
 import com.example.laundrymanagementghy.OfficerActivity.OfficerLogin;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.SSEActvity.SSEDashboard;
 import com.example.laundrymanagementghy.StoreActivity.StoreDashboard;
 import com.example.laundrymanagementghy.SupervisorActivity.SupervisorDashboard;
-import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 
@@ -38,7 +33,8 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 
 public class LoginActivity extends AppCompatActivity {
-    private final static String LOGIN_API ="http://lmsguwahati.projectrailway.in/Api/login2";
+    //    private final static String LOGIN_API ="http://lmsguwahati.projectrailway.in/Api/login2";
+    private final static String LOGIN_API = "http://lmskyq.projectrailway.in/Api/login2";
     private boolean doubleBacktoExitpresone = false;
     Button bt_login,bt_clear;
     EditText et_uid, et_password;

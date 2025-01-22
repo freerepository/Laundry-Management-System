@@ -1,10 +1,5 @@
 package com.example.laundrymanagementghy.DeportActivity.PanaltyUpdateScreen;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.DatePickerDialog;
 import android.app.UiModeManager;
 import android.content.Intent;
@@ -14,10 +9,14 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -25,10 +24,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.LaundryActivity.BedrollStocking;
-import com.example.laundrymanagementghy.LaundryActivity.BedrollStockingAddActivity;
 import com.example.laundrymanagementghy.R;
-import com.example.laundrymanagementghy.model.GetStockModel;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 
@@ -43,7 +39,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Depot_PanaltyScreen extends AppCompatActivity {
-    private final static String STOCKDATA_list = "http://lmsguwahati.projectrailway.in/api/getmissingPenaltyData";
+    private final static String STOCKDATA_list = "http://lmskyq.projectrailway.in/api/getmissingPenaltyData";
 
     private ImageView v_add_buffer;
     RecyclerView recyclerView;

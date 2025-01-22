@@ -1,12 +1,5 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +19,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -50,11 +50,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class ReceivedFronLaundry extends AppCompatActivity {
-    private final static String Received_Laundry_List = "http://lmsguwahati.projectrailway.in/Api/depot_received_from_laundry";
-    private final static String update_delivery = "http://lmsguwahati.projectrailway.in/Api/depot_update_delivery_status";
+    private final static String Received_Laundry_List = "http://lmskyq.projectrailway.in/Api/depot_received_from_laundry";
+    private final static String update_delivery = "http://lmskyq.projectrailway.in/Api/depot_update_delivery_status";
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
-    String  deport_code="" ;
+    String deport_code = "";
     TextView tv_empty_data;
     AlertDialog dialog;
     final Calendar myCalendar = Calendar.getInstance();

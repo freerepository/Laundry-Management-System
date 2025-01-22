@@ -1,13 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.UiModeManager;
@@ -24,13 +16,19 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -41,12 +39,9 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.EditReceived;
-import com.example.laundrymanagementghy.Amodel.SupplyList;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.Bmodel.GetReceiveddailogStoreList;
-import com.example.laundrymanagementghy.Bmodel.GetstoreList;
 import com.example.laundrymanagementghy.Bmodel.SoiledModelList;
-import com.example.laundrymanagementghy.DeportActivity.ReceivedFromTrainActivity;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
@@ -65,8 +60,8 @@ import java.util.List;
 import java.util.Locale;
 
 public class FreshBedrollReceiptfromLaundry extends AppCompatActivity {
-    private final static String received_from_store_list_Api = "http://lmsguwahati.projectrailway.in/api/soiled_bedroll_received_from_depot";
-    private final static String update_store_status = "http://lmsguwahati.projectrailway.in/Api/update_store_status";
+    private final static String received_from_store_list_Api = "http://lmskyq.projectrailway.in/api/soiled_bedroll_received_from_depot";
+    private final static String update_store_status = "http://lmskyq.projectrailway.in/Api/update_store_status";
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
     TextView tv_empty_data, tv_tittle;
@@ -376,7 +371,7 @@ public class FreshBedrollReceiptfromLaundry extends AppCompatActivity {
                         dialog.findViewById(R.id.v_positive).setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                DataUpdated(dialog, list.get(position).mSent_id, "http://lmsguwahati.projectrailway.in/api/verify_cleaned_status");
+                                DataUpdated(dialog, list.get(position).mSent_id, "http://lmskyq.projectrailway.in/api/verify_cleaned_status");
                             }
 
 
@@ -878,7 +873,7 @@ public class FreshBedrollReceiptfromLaundry extends AppCompatActivity {
                                 Log.e("reqbody", requestBody);
                                 showLoading("Please wait...");
 
-                                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://lmsguwahati.projectrailway.in/api/verify_solied_bedroll_status", new Response.Listener<String>() {
+                                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://lmskyq.projectrailway.in/api/verify_solied_bedroll_status", new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
                                         hideLoading();

@@ -31,6 +31,7 @@
                     android:layout_weight="0.2"
                     android:padding="5dp"
                     android:textSize="18dp"
+                    style="@style/textBothBlack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@android:style/TextAppearance.Large"/>
@@ -46,47 +47,47 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/shape"
+                style="@style/border"
                 android:layout_margin="10dp"
                 android:id="@+id/design4">
                 <Spinner
                     android:id="@+id/sp_selectdepot"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#211246"
+                    style="@style/spinnerbackground"
                     android:padding="5dp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/shape"
+                style="@style/border"
                 android:layout_margin="10dp"
                 android:id="@+id/design">
                 <Spinner
                     android:id="@+id/sp_laundry"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#211246"
+                    style="@style/spinnerbackground"
                     android:padding="5dp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/shape"
+                style="@style/border"
                 android:layout_margin="10dp"
                 android:id="@+id/design1">
                 <Spinner
                     android:id="@+id/sp_designation"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#211246"
+                    style="@style/spinnerbackground"
                     android:padding="5dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/shape"
+                style="@style/border"
                 android:layout_margin="10dp"
                 android:layout_below="@+id/design"
                 android:id="@+id/design2">
@@ -95,7 +96,7 @@
                     android:id="@+id/sp_grade"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#211246"
+                    style="@style/spinnerbackground"
                     android:padding="5dp" />
 
             </LinearLayout>
@@ -131,7 +132,7 @@
                     <RadioButton
                         android:layout_weight="1"
                         android:id="@+id/rb1"
-                        android:textColor="@android:color/black"
+                        style="@style/text"
                         android:text="10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -139,20 +140,20 @@
                         android:layout_weight="1"
                         android:id="@+id/rb2"
                         android:text="8"
-                        android:textColor="@android:color/black"
+                        style="@style/text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <RadioButton
                         android:layout_weight="1"
                         android:id="@+id/rb3"
                         android:text="6"
-                        android:textColor="@android:color/black"
+                        style="@style/text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <RadioButton
                         android:layout_weight="1"
                         android:id="@+id/rb4"
-                        android:textColor="@android:color/black"
+                        style="@style/text"
                         android:text="4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -160,7 +161,7 @@
                     <RadioButton
                         android:layout_weight="1"
                         android:id="@+id/rb5"
-                        android:textColor="@android:color/black"
+                        style="@style/text"
                         android:text="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -183,7 +184,7 @@
                     android:textSize="24sp"
                     android:layout_weight="1"
                     android:layout_margin="8dp"
-                    android:textColor="@android:color/black"
+                    style="@style/text"
                     android:text="Amount :"/>
 
                 <EditText
@@ -193,7 +194,7 @@
                     android:id="@+id/amount"
                     android:layout_weight="1"
                     android:inputType="number"
-                    android:textColor="@android:color/black"
+                    style="@style/text"
                     android:hint="@string/ruppee_text"/>
 
             </LinearLayout>
@@ -211,7 +212,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:textColor="@android:color/black"
+                    style="@style/text"
                     android:contentDescription="@string/Officer"
                     android:text="Remark : "/>
 
@@ -221,7 +222,7 @@
                     android:textSize="20sp"
                     android:id="@+id/remark"
                     android:scrollbars="vertical"
-                    android:textColor="@android:color/black"
+                    style="@style/text"
                     android:hint="Write Something"/>
 
             </LinearLayout>

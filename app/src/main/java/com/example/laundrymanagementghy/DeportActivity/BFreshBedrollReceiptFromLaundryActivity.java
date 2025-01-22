@@ -19,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -49,8 +48,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class BFreshBedrollReceiptFromLaundryActivity extends AppCompatActivity {
-    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/fresh_bedroll_received_from_laundry";
-    private final static String VRIFY_API = "http://lmsguwahati.projectrailway.in/api/verify_and_train_supply";
+    private final static String BEDROLL_API = "http://lmskyq.projectrailway.in/api/fresh_bedroll_received_from_laundry";
+    private final static String VRIFY_API = "http://lmskyq.projectrailway.in/api/verify_and_train_supply";
 
     ImageView iv_add_supply;
     TextView tv_tittle, tv_empty_data;

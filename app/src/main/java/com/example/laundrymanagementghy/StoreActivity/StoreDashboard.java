@@ -1,11 +1,5 @@
 package com.example.laundrymanagementghy.StoreActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,6 +12,12 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -38,7 +38,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class StoreDashboard extends AppCompatActivity {
-    public static String Supervisor_cat = "http://lmsguwahati.projectrailway.in/Api/get_maincategory";
+    public static String Supervisor_cat = "http://lmskyq.projectrailway.in/Api/get_maincategory";
     TextView tv_user_name;
     View vlogout;
     ImageView v_back_button;

@@ -1,15 +1,15 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -32,7 +32,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class ReceivedStoreListActivity extends AppCompatActivity {
-    private final static String received_Api = "http://lmsguwahati.projectrailway.in/Api/get_received_CBSItems";
+    private final static String received_Api = "http://lmskyq.projectrailway.in/Api/get_received_CBSItems";
     RecyclerView recyclerView1;
     SwipeRefreshLayout srl1;
     String  deport_code="" ,id;

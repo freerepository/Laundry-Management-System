@@ -1,10 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -15,21 +10,21 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -59,10 +54,10 @@ import java.util.List;
 import java.util.Locale;
 
 public class FreshBedrollSupplytoAddDepot extends AppCompatActivity {
-    private final static String GET_DEPOT_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_depots";
-    private final static String GET_COACH_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_coach";
-    private final static String GET_TRAIN_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_trains";
-    private final static String SAVE_API = "http://lmsguwahati.projectrailway.in/Api/save_supply_to_laundry";
+    private final static String GET_DEPOT_TYPE = "http://lmskyq.projectrailway.in/Api/get_depots";
+    private final static String GET_COACH_TYPE = "http://lmskyq.projectrailway.in/Api/get_coach";
+    private final static String GET_TRAIN_TYPE = "http://lmskyq.projectrailway.in/Api/get_trains";
+    private final static String SAVE_API = "http://lmskyq.projectrailway.in/Api/save_supply_to_laundry";
     EditText et_no_of_bag, et_bed_sheet, et_pillow_cover, et_face_towel,
             et_blanket_cover, et_bath_towel, et_blanket, et_total_packets, et_remark, et_date, et_pillow;
     TextView btn_submit;

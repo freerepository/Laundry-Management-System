@@ -1,20 +1,9 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.UiModeManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -24,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -32,22 +20,24 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.Bmodel.GetCondemendList;
-import com.example.laundrymanagementghy.Bmodel.GetstoreList;
-import com.example.laundrymanagementghy.DeportActivity.BedrollReturnAddStockActvity;
-import com.example.laundrymanagementghy.DeportActivity.BedrollReturntViewStockActivity;
 import com.example.laundrymanagementghy.DeportActivity.BedrollReturntoLaundrytFromBufferStockActivity;
-import com.example.laundrymanagementghy.DeportActivity.SendToLaundryActivity;
 import com.example.laundrymanagementghy.LaundryActivity.Updating.BedrollStockViewItemActivity;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.util.O;
@@ -65,14 +55,14 @@ import java.util.Date;
 import java.util.Locale;
 
 public class CondemnedBedrollActivity extends AppCompatActivity {
-//    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/get_bedroll_return_to_laundry_from_buffer_stock";
-    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/get_bedroll_condemnation";
+    //    private final static String BEDROLL_API = "http://lmskyq.projectrailway.in/api/get_bedroll_return_to_laundry_from_buffer_stock";
+    private final static String BEDROLL_API = "http://lmskyq.projectrailway.in/api/get_bedroll_condemnation";
 
-    private final static String VRIFY_API = "http://lmsguwahati.projectrailway.in/api/verify_and_train_supply";
-    private final static String VARIFY_CONFIRM_API = "http://lmsguwahati.projectrailway.in/api/VerifyStatus";
+    private final static String VRIFY_API = "http://lmskyq.projectrailway.in/api/verify_and_train_supply";
+    private final static String VARIFY_CONFIRM_API = "http://lmskyq.projectrailway.in/api/VerifyStatus";
 
     ImageView iv_add_supply;
-    TextView tv_tittle, tv_empty_data,stts;
+    TextView tv_tittle, tv_empty_data, stts;
     EditText et_dateFrom, et_dateTo;
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
@@ -85,8 +75,8 @@ public class CondemnedBedrollActivity extends AppCompatActivity {
     UserDataModel userdataModel;
 
 
-//    private final static String get_CBSDepot_API = "http://lmsguwahati.projectrailway.in/Api/get_CbdDepotData";
-//    private final static String get_CBSDepot_API = "http://lmsguwahati.projectrailway.in/api/get_bedroll_condemnation";
+//    private final static String get_CBSDepot_API = "http://lmskyq.projectrailway.in/Api/get_CbdDepotData";
+//    private final static String get_CBSDepot_API = "http://lmskyq.projectrailway.in/api/get_bedroll_condemnation";
 //
 //    ImageView iv_addSupply;
 //    TextView tv_empty_data;
@@ -472,7 +462,7 @@ public class CondemnedBedrollActivity extends AppCompatActivity {
 
     private void hitVerifyStatusApi(Context context, String rowId, String tableName, ImageView iv_varify) {
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url = "http://lmsguwahati.projectrailway.in/api/VerifyStatus";
+        String url = "http://lmskyq.projectrailway.in/api/VerifyStatus";
         JSONObject jsonBody = new JSONObject();
         try {
             jsonBody.put("row_id", rowId);

@@ -319,15 +319,17 @@
                 android:background="@drawable/shape_outline"
                 android:layout_margin="8dp"
                 android:elevation="2dp">
+
                 <TextView
                     android:id="@+id/tv1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp"
                     android:paddingStart="4dp"
                     android:paddingEnd="4dp"
+                    style="@style/textBothBlack"
+                    android:text="Signature of supervisor"
                     android:textAppearance="@android:style/TextAppearance.Medium"
-                    android:text="Signature of supervisor"/>
+                    android:textSize="14sp" />
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="28dp"

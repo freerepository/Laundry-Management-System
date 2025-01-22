@@ -261,6 +261,7 @@
                             android:layout_height="wrap_content"
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
+                            style="@style/textBothBlack"
                             android:text="Supervisor Signature"
                             android:textAppearance="@android:style/TextAppearance.Medium"
                             android:textSize="12sp" />
@@ -313,6 +314,7 @@
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
                             android:text="SSE/JE Signature"
+                            style="@style/textBothBlack"
                             android:textAppearance="@android:style/TextAppearance.Medium"
                             android:textSize="12sp" />
 

@@ -20,8 +20,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
 import com.example.laundrymanagementghy.R;
+import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
@@ -39,7 +39,7 @@ public class LaundryViewActivity extends AppCompatActivity {
     private String myid;
     private ImageView v_back;
 
-    private static final String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/getPenaltyitems";  // Replace with your actual URL
+    private static final String STOCKDATA_VIEW = "http://lmskyq.projectrailway.in/api/getPenaltyitems";  // Replace with your actual URL
 //    private static final String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/getmissingPenaltyitems";  // Replace with your actual URL
 
     @Override

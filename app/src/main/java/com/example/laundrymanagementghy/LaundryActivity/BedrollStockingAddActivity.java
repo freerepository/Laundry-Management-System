@@ -23,7 +23,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -57,11 +56,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 public class BedrollStockingAddActivity extends AppCompatActivity {
-    private final static String SubmitPenaltyData = "http://lmsguwahati.projectrailway.in/api/save_stockitems";
-    private final static String questionAPI = "http://lmsguwahati.projectrailway.in/api/getLaundryItems";
+    private final static String SubmitPenaltyData = "http://lmskyq.projectrailway.in/api/save_stockitems";
+    private final static String questionAPI = "http://lmskyq.projectrailway.in/api/getLaundryItems";
 
     ImageView iv_backView, iv_calender;
     EditText et_date;

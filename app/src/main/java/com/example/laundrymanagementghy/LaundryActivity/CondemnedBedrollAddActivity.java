@@ -1,12 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.app.UiModeManager;
@@ -15,7 +8,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -34,6 +26,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
@@ -48,9 +46,7 @@ import com.example.laundrymanagementghy.Activity.CaptureSignatureActivity;
 import com.example.laundrymanagementghy.Activity.VolleyMultipartRequest;
 import com.example.laundrymanagementghy.Amodel.QanswerData1;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.DeportActivity.BedrollReturnAddStockActvity;
 import com.example.laundrymanagementghy.R;
-import com.example.laundrymanagementghy.resoures.QanswerData;
 import com.example.laundrymanagementghy.resoures.QueStoreModel;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
@@ -59,7 +55,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -70,22 +65,21 @@ import java.util.Locale;
 import java.util.Map;
 
 public class CondemnedBedrollAddActivity extends AppCompatActivity {
-    private final static String storequestionAPI = "http://lmsguwahati.projectrailway.in/api/getcondemnationItems";
-    private final static String REASON_API = "http://lmsguwahati.projectrailway.in/api/getReason";
-    public final static String STORING_Image = "http://lmsguwahati.projectrailway.in/Api/upload_signature";
-    private final static String GET_DEPOT_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_depots";
-    private final static String SubmitPenaltyData="http://lmsguwahati.projectrailway.in/api/save_bedroll_condemnation";
+    public final static String STORING_Image = "http://lmskyq.projectrailway.in/Api/upload_signature";
+    private final static String storequestionAPI = "http://lmskyq.projectrailway.in/api/getcondemnationItems";
+    private final static String REASON_API = "http://lmskyq.projectrailway.in/api/getReason";
+    private final static String GET_DEPOT_TYPE = "http://lmskyq.projectrailway.in/Api/get_depots";
+    private final static String SubmitPenaltyData = "http://lmskyq.projectrailway.in/api/save_bedroll_condemnation";
 
 
+    //    private final static String SubmitPenaltyData="http://lmskyq.projectrailway.in/api/save_bedroll_return_from_depot";
+    //    private final static String GET_Laundry = "http://lmskyq.projectrailway.in/Api/get_all_laundry";
 
-    //    private final static String SubmitPenaltyData="http://lmsguwahati.projectrailway.in/api/save_bedroll_return_from_depot";
-    //    private final static String GET_Laundry = "http://lmsguwahati.projectrailway.in/Api/get_all_laundry";
 
-
-    ImageView iv_backView,iv_calender;
+    ImageView iv_backView, iv_calender;
     EditText et_date;
     Button submit;
-//    Spinner sp_select_depot;
+    //    Spinner sp_select_depot;
     SupplyCondAddBsradapter adapter;
     RecyclerView recyclerView;
     UserDataModel userdataModel;

@@ -18,9 +18,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -30,7 +27,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.laundrymanagementghy.Amodel.GetBufferIssueList;
 import com.example.laundrymanagementghy.Amodel.GetPenaltyList;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.R;
@@ -48,7 +44,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class PenaltyModuleActivity extends AppCompatActivity {
-    private final static String PENALTY_API = "http://lmsguwahati.projectrailway.in/api/getPenaltyData";
+    private final static String PENALTY_API = "http://lmskyq.projectrailway.in/api/getPenaltyData";
     ImageView v_add_buffer;
     TextView tv_empty_data;
     RecyclerView recyclerView;

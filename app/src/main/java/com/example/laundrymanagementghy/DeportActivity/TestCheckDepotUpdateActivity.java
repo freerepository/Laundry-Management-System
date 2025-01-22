@@ -1,11 +1,5 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -16,6 +10,12 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -38,7 +38,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 public class TestCheckDepotUpdateActivity extends AppCompatActivity {
-    private final static String view_testcheck_API = "http://lmsguwahati.projectrailway.in/Api/view_testcheck";
+    private final static String view_testcheck_API = "http://lmskyq.projectrailway.in/Api/view_testcheck";
     private RecyclerView recyclerView;
     SwipeRefreshLayout srl;
     EditText et_user_type,et_train_no,et_laundry_type,et_remark,et_pamount;

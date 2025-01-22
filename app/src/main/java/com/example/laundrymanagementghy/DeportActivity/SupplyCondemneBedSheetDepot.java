@@ -1,12 +1,5 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +15,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -44,7 +44,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class SupplyCondemneBedSheetDepot extends AppCompatActivity {
-    private final static String get_send_CBSDLaundry_API = "http://lmsguwahati.projectrailway.in/Api/get_SentCbdtolaundryData";
+    private final static String get_send_CBSDLaundry_API = "http://lmskyq.projectrailway.in/Api/get_SentCbdtolaundryData";
     ImageView iv_addSupply;
     TextView tv_data_not_found;
     UserDataModel userdataModel;

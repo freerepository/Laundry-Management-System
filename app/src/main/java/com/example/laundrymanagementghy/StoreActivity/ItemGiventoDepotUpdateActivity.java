@@ -1,11 +1,5 @@
 package com.example.laundrymanagementghy.StoreActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -31,6 +25,12 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -65,12 +65,11 @@ import java.util.Locale;
 import java.util.Map;
 
 public class ItemGiventoDepotUpdateActivity extends AppCompatActivity {
-    private final static String edit_SentCbstodepotData_API = "http://lmsguwahati.projectrailway.in/Api/edit_SentCbstodepotData";
-
-    public final static String STORING_Image = "http://lmsguwahati.projectrailway.in/Api/upload_signature";
-    private final static String get_depots = "http://lmsguwahati.projectrailway.in/Api/get_depots";
-    private final static String SubmitcbsdepotData = "http://lmsguwahati.projectrailway.in/Api/save_SentCbstodepot";
-    ImageView iv_backView,iv_calender;
+    public final static String STORING_Image = "http://lmskyq.projectrailway.in/Api/upload_signature";
+    private final static String edit_SentCbstodepotData_API = "http://lmskyq.projectrailway.in/Api/edit_SentCbstodepotData";
+    private final static String get_depots = "http://lmskyq.projectrailway.in/Api/get_depots";
+    private final static String SubmitcbsdepotData = "http://lmskyq.projectrailway.in/Api/save_SentCbstodepot";
+    ImageView iv_backView, iv_calender;
     EditText et_date;
     Button submit;
     Spinner sp_depot;
@@ -78,8 +77,8 @@ public class ItemGiventoDepotUpdateActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
     UserDataModel userdataModel;
-    UpdateGivenDepotCBS updateGivenDepotCBS=null;
-    String requestBody,id,depot_name;
+    UpdateGivenDepotCBS updateGivenDepotCBS = null;
+    String requestBody, id, depot_name;
     String message;
 
     public JSONArray questionArray;

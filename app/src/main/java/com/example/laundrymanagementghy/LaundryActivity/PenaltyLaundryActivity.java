@@ -1,11 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -27,6 +21,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -62,12 +62,11 @@ import java.util.Locale;
 import java.util.Map;
 
 public class PenaltyLaundryActivity extends AppCompatActivity {
-    private final static String SubmitPenaltyData = "http://lmsguwahati.projectrailway.in/Api/save_penalties";
-    private final static String questionAPI = "http://lmsguwahati.projectrailway.in/Api/penalty_questions";
-
-    public final static String STORING_Image = "http://lmsguwahati.projectrailway.in/Api/upload_signature";
-    ImageView iv_backView,iv_calender;
-    EditText et_date,et_remark;
+    public final static String STORING_Image = "http://lmskyq.projectrailway.in/Api/upload_signature";
+    private final static String SubmitPenaltyData = "http://lmskyq.projectrailway.in/Api/save_penalties";
+    private final static String questionAPI = "http://lmskyq.projectrailway.in/Api/penalty_questions";
+    ImageView iv_backView, iv_calender;
+    EditText et_date, et_remark;
     Button submit;
     public TextView tv_total_penality_amount;
     RecyclerView recyclerView;

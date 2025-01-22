@@ -50,6 +50,7 @@
         android:background="@drawable/shape_outline"
         android:autofillHints=""
         android:inputType="number"
+        style="@style/textBothBlack"
         tools:ignore="TextFields" />
 
 

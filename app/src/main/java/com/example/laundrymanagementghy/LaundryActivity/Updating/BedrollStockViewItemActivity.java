@@ -25,7 +25,6 @@ import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.Bmodel.CodemendGetDataItem;
 import com.example.laundrymanagementghy.R;
-//import com.example.laundrymanagementghy.model.GetStockView;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 
@@ -35,7 +34,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class BedrollStockViewItemActivity extends AppCompatActivity {
-    private final static String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/get_bedroll_condemnation_Items";
+    private final static String STOCKDATA_VIEW = "http://lmskyq.projectrailway.in/api/get_bedroll_condemnation_Items";
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
     TextView tv_tittle, tv_empty_data;

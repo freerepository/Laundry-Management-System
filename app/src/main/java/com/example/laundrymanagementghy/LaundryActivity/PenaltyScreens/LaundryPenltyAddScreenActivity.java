@@ -1,13 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity.PenaltyScreens;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.app.UiModeManager;
@@ -18,7 +10,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,10 +21,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -47,7 +45,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Activity.CaptureSignatureActivity;
 import com.example.laundrymanagementghy.Activity.VolleyMultipartRequest;
-import com.example.laundrymanagementghy.Amodel.GetLaundryItem;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.resoures.QanswerData;
@@ -61,18 +58,17 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class LaundryPenltyAddScreenActivity extends AppCompatActivity {
 
     ImageView v_back;
-    private final static String SubmitPenaltyData = "http://lmsguwahati.projectrailway.in/api/save_laundry_penalties";
-    private final static String questionAPI = "http://lmsguwahati.projectrailway.in/api/penalty_questions";
-    private final static String GET_DEPOT_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_depots";
+    public final static String STORING_Image = "http://lmskyq.projectrailway.in/Api/upload_signature";
+    private final static String SubmitPenaltyData = "http://lmskyq.projectrailway.in/api/save_laundry_penalties";
+    private final static String questionAPI = "http://lmskyq.projectrailway.in/api/penalty_questions";
     UserDataModel userDataModel;
     UiModeManager uiModeManager;
-    public final static String STORING_Image = "http://lmsguwahati.projectrailway.in/Api/upload_signature";
+    private final static String GET_DEPOT_TYPE = "http://lmskyq.projectrailway.in/Api/get_depots";
 
     Spinner sp_depot;
     public String selectedDepot = "", depot;

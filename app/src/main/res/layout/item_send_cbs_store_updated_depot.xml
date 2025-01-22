@@ -57,6 +57,7 @@
         android:layout_margin="2dp"
         android:gravity="center"
         android:textSize="13sp"
+        style="@style/textBothBlack"
         android:maxLength="13"
         android:id="@+id/et_quantitysunil"
         android:background="@drawable/shape_outline"

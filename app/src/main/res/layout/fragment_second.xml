@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/shape"
+            style="@style/border"
             android:layout_marginRight="5dp"
             android:gravity="center"
             android:orientation="horizontal">
@@ -55,7 +55,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                app:tint="@color/black"
+                app:tint="@color/colorAccent"
                 android:src="@drawable/icon_calendar"
                 android:padding="4dp"/>
             <EditText
@@ -67,8 +67,7 @@
                 android:backgroundTint="@color/hint_color"
                 android:clickable="false"
                 android:cursorVisible="false"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
+                style="@style/text"
                 android:focusable="false"
                 android:layout_marginStart="@dimen/_6sdp"
                 android:focusableInTouchMode="false"
@@ -84,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/shape"
+            style="@style/border"
             android:gravity="center"
             android:orientation="horizontal">
             <ImageView
@@ -94,7 +93,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                app:tint="@color/black"
+                app:tint="@color/colorAccent"
                 android:src="@drawable/icon_calendar"
                 android:padding="4dp"/>
 
@@ -107,8 +106,7 @@
                 android:backgroundTint="@color/hint_color"
                 android:clickable="false"
                 android:cursorVisible="false"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
+                style="@style/text"
                 android:focusable="false"
                 android:layout_marginStart="@dimen/_6sdp"
                 android:focusableInTouchMode="false"
@@ -134,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/shape"
+            style="@style/border"
             android:gravity="center"
 
             android:orientation="horizontal">
@@ -320,7 +318,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/shape"
+                style="@style/border"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -337,7 +335,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/shape"
+                style="@style/border"
                 android:gravity="center"
                 android:orientation="horizontal">
 

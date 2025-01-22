@@ -1,15 +1,7 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.Dialog;
 import android.app.UiModeManager;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,9 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -32,7 +29,6 @@ import com.example.laundrymanagementghy.Activity.IntroSliderActivity;
 import com.example.laundrymanagementghy.Activity.LoginActivity;
 import com.example.laundrymanagementghy.Amodel.LaundryCategory;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-
 import com.example.laundrymanagementghy.LaundryActivity.PenaltyScreens.LaundryPenltryScreenActivity;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.util.O;
@@ -44,7 +40,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class LaundryDashboard extends AppCompatActivity {
-    public static String LIST_CATEGORY = "http://lmsguwahati.projectrailway.in/Api/get_maincategory";
+    public static String LIST_CATEGORY = "http://lmskyq.projectrailway.in/Api/get_maincategory";
 
     TextView tv_user_name;
     UserDataModel userdataModel;

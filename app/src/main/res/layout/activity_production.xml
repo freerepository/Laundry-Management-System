@@ -60,6 +60,7 @@
                 android:layout_centerVertical="true"
                 android:focusable="false"
                 android:fontFamily="sans-serif"
+
                 android:gravity="center"
                 android:hint=""
                 android:textSize="14dp" />
@@ -104,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:text="Bed Sheets"
-                    android:textColor="@color/black"
+                    style="@style/text"
                     app:tint="@color/colorWhite"/>
                 <EditText
                     android:id="@+id/et_bed_sheets"
@@ -132,7 +133,7 @@
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:text="Pillow Cover"
                     android:layout_marginStart="12dp"
-                    android:textColor="@color/black"
+                    style="@style/text"
                     app:tint="@color/colorWhite"/>
                 <EditText
                     android:id="@+id/et_pillow_cover"
@@ -170,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:text="Face Towel"
-                    android:textColor="@color/black"
+                    style="@style/text"
                     app:tint="@color/colorWhite"/>
                 <EditText
                     android:id="@+id/et_face_towel"
@@ -198,7 +199,7 @@
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:text="Blanket"
                     android:layout_marginStart="12dp"
-                    android:textColor="@color/black"
+                    style="@style/text"
                     app:tint="@color/colorWhite"/>
                 <EditText
                     android:id="@+id/et_blanket"
@@ -235,7 +236,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:text="Total Packets"
-                    android:textColor="@color/black"
+                    style="@style/text"
                     app:tint="@color/colorWhite"/>
                 <EditText
                     android:id="@+id/et_face_towel"
@@ -263,7 +264,7 @@
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:text="Total Blankets"
                     android:layout_marginStart="12dp"
-                    android:textColor="@color/black"
+                    style="@style/text"
                     app:tint="@color/colorWhite"/>
                 <EditText
                     android:id="@+id/et_blanket"

@@ -1,11 +1,5 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -25,6 +19,12 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -47,11 +47,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TestCheckActivity extends AppCompatActivity {
-    private final static String Train_List_API = "http://lmsguwahati.projectrailway.in/Api/get_trains";
-    private final static String SupOfficerList_API = "http://lmsguwahati.projectrailway.in/Api/get_suptypes";
-    private final static String Laundry_Type = "http://lmsguwahati.projectrailway.in/Api/get_all_laundry";
-    private final static String Remark_API = " http://lmsguwahati.projectrailway.in/Api/get_remark";
-    private final static String questionAPI = "http://lmsguwahati.projectrailway.in/Api/get_laundryItems";
+    private final static String Train_List_API = "http://lmskyq.projectrailway.in/Api/get_trains";
+    private final static String SupOfficerList_API = "http://lmskyq.projectrailway.in/Api/get_suptypes";
+    private final static String Laundry_Type = "http://lmskyq.projectrailway.in/Api/get_all_laundry";
+    private final static String Remark_API = " http://lmskyq.projectrailway.in/Api/get_remark";
+    private final static String questionAPI = "http://lmskyq.projectrailway.in/Api/get_laundryItems";
     private RecyclerView recyclerView;
     SwipeRefreshLayout srl;
     Button btn_next;
@@ -59,7 +59,7 @@ public class TestCheckActivity extends AppCompatActivity {
     ImageView iv_backView;
     View signature_layout;
     TextView tv_total_penality_amount;
-    Spinner sp_sup_officer,spTrainNo,sp_laundry,sp_remark;
+    Spinner sp_sup_officer, spTrainNo, sp_laundry, sp_remark;
     public JSONArray questionArray;
 
 

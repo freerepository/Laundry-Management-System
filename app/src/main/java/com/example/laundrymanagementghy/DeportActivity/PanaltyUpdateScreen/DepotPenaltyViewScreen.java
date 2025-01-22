@@ -1,16 +1,16 @@
 package com.example.laundrymanagementghy.DeportActivity.PanaltyUpdateScreen;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -41,7 +41,7 @@ public class DepotPenaltyViewScreen extends AppCompatActivity {
     private ProgressBar progressBar;
     private String myid;
     private ImageView v_back;
-    private static final String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/getmissingPenaltyitems";  // Replace with your actual URL
+    private static final String STOCKDATA_VIEW = "http://lmskyq.projectrailway.in/api/getmissingPenaltyitems";  // Replace with your actual URL
 
 
     @Override

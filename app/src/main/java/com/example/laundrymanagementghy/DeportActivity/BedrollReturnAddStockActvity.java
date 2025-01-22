@@ -1,14 +1,12 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
 import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -16,7 +14,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,7 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,24 +43,17 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Activity.CaptureSignatureActivity;
 import com.example.laundrymanagementghy.Activity.VolleyMultipartRequest;
-import com.example.laundrymanagementghy.Amodel.GetBufferIssueList;
 import com.example.laundrymanagementghy.Amodel.QanswerData1;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.LaundryActivity.BufferStockIssuetoDepot;
-import com.example.laundrymanagementghy.LaundryActivity.CondemnedBedrollActivity;
-import com.example.laundrymanagementghy.LaundryActivity.CondemnedBedrollAddActivity;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.resoures.QueStoreModel;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -76,12 +65,12 @@ import java.util.Map;
 
 public class BedrollReturnAddStockActvity extends AppCompatActivity {
 
-    private static String storequestionAPI = "http://lmsguwahati.projectrailway.in/api/getcondemnationItems";
-    private final static String getstorequestionAPI = "http://lmsguwahati.projectrailway.in/api/getbufferItems";
-    private final static String REASON_API = "http://lmsguwahati.projectrailway.in/api/getReason";
-    public final static String STORING_Image = "http://lmsguwahati.projectrailway.in/Api/upload_signature";
-    private final static String GET_DEPOT = "http://lmsguwahati.projectrailway.in/Api/get_all_laundry";
-    private final static String SubmitPenaltyData = "http://lmsguwahati.projectrailway.in/api/save_bedroll_return_from_depot";
+    public final static String STORING_Image = "http://lmskyq.projectrailway.in/Api/upload_signature";
+    private final static String getstorequestionAPI = "http://lmskyq.projectrailway.in/api/getbufferItems";
+    private final static String REASON_API = "http://lmskyq.projectrailway.in/api/getReason";
+    private final static String GET_DEPOT = "http://lmskyq.projectrailway.in/Api/get_all_laundry";
+    private final static String SubmitPenaltyData = "http://lmskyq.projectrailway.in/api/save_bedroll_return_from_depot";
+    private static String storequestionAPI = "http://lmskyq.projectrailway.in/api/getcondemnationItems";
     ImageView iv_backView, iv_calender;
     EditText et_date;
     Button submit;
@@ -333,7 +322,7 @@ public class BedrollReturnAddStockActvity extends AppCompatActivity {
                     rqty.setVisibility(View.GONE);
                     adapter.notifyDataSetChanged();
                 } else {
-                    storequestionAPI = "http://lmsguwahati.projectrailway.in/api/getbufferItems";
+                    storequestionAPI = "http://lmskyq.projectrailway.in/api/getbufferItems";
                     submit.setVisibility(View.VISIBLE);
                     rqty.setVisibility(View.VISIBLE);
                     selectedDepot = depotList.get(i);

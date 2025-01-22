@@ -1,13 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.UiModeManager;
@@ -32,6 +24,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -42,14 +42,12 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.Bmodel.GetCondemendList;
-import com.example.laundrymanagementghy.DeportActivity.BedrollReturnAddStockActvity;
 import com.example.laundrymanagementghy.DeportActivity.BedrollReturntViewStockActivity;
 import com.example.laundrymanagementghy.DeportActivity.BedrollReturntoLaundrytFromBufferStockActivity;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -59,17 +57,15 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 public class ReceiveReturnedBufferFromLaundry extends AppCompatActivity {
 
-    //    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/get_bedroll_return_Items";
-    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/get_bedroll_return_to_laundry_from_buffer_stock";
+    //    private final static String BEDROLL_API = "http://lmskyq.projectrailway.in/api/get_bedroll_return_Items";
+    private final static String BEDROLL_API = "http://lmskyq.projectrailway.in/api/get_bedroll_return_to_laundry_from_buffer_stock";
     //varify api used in below
-    private final static String VRIFY_API = "http://lmsguwahati.projectrailway.in/api/verify_and_train_supply";
-    private final static String VARIFY_CONFIRM_API = "http://lmsguwahati.projectrailway.in/api/VerifyStatus";
+    private final static String VRIFY_API = "http://lmskyq.projectrailway.in/api/verify_and_train_supply";
+    private final static String VARIFY_CONFIRM_API = "http://lmskyq.projectrailway.in/api/VerifyStatus";
 
     ImageView iv_add_supply;
     EditText et_dateFrom, et_dateTo;
@@ -521,7 +517,7 @@ public class ReceiveReturnedBufferFromLaundry extends AppCompatActivity {
 
     private void hitVerifyStatusApi(Context context, String rowId, String tableName, TextView iv_varify) {
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url = "http://lmsguwahati.projectrailway.in/api/VerifyStatus";
+        String url = "http://lmskyq.projectrailway.in/api/VerifyStatus";
         JSONObject jsonBody = new JSONObject();
         try {
             jsonBody.put("row_id", rowId);

@@ -1,35 +1,23 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -39,12 +27,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.laundrymanagementghy.Amodel.FreshBedrollModel;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.DeportActivity.BFreshBedrollReceiptFromLaundryActivity;
 import com.example.laundrymanagementghy.LaundryActivity.Updating.FreshBedRollUpdateActivty;
-import com.example.laundrymanagementghy.model.GetFreshSupplyList;
 import com.example.laundrymanagementghy.R;
+import com.example.laundrymanagementghy.model.GetFreshSupplyList;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
@@ -52,15 +38,10 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
 public class FreshBedrollSupplytoDepot extends AppCompatActivity {
-    private final static String fresh_laundry_list = "http://lmsguwahati.projectrailway.in/Api/depot_received_from_laundry";
+    private final static String fresh_laundry_list = "http://lmskyq.projectrailway.in/Api/depot_received_from_laundry";
 
 
     RecyclerView recyclerView;

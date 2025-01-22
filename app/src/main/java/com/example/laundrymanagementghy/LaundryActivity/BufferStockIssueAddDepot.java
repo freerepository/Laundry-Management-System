@@ -22,7 +22,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +36,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.GetBufferIssueList;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.Bmodel.SaveDateSupply;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
@@ -57,8 +55,8 @@ import java.util.List;
 import java.util.Locale;
 
 public class BufferStockIssueAddDepot extends AppCompatActivity {
-    private final static String get_depot = "http://lmsguwahati.projectrailway.in/Api/get_depots";
-    private final static String SAVE_API = "http://lmsguwahati.projectrailway.in/api/save_bufferstock";
+    private final static String get_depot = "http://lmskyq.projectrailway.in/Api/get_depots";
+    private final static String SAVE_API = "http://lmskyq.projectrailway.in/api/save_bufferstock";
     EditText et_date, et_bed_sheet, et_pillow, et_pillow_cover, et_blanket, et_blanket_cover, et_hand_towel, et_reason;
     Button btn_next_submit;
     ImageView v_back;
@@ -316,7 +314,6 @@ public class BufferStockIssueAddDepot extends AppCompatActivity {
 
     private void GetDepotType() {
         JSONObject jsonObject = new JSONObject();
-
         final JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, get_depot, null,
                 new Response.Listener<JSONObject>() {
                     @Override

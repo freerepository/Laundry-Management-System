@@ -1,11 +1,5 @@
 package com.example.laundrymanagementghy.StoreActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -28,6 +22,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -61,19 +61,18 @@ import java.util.Locale;
 import java.util.Map;
 
 public class ItemReceivedFromOtherPlacesAddActivity extends AppCompatActivity {
-    private final static String storequestionAPI = "http://lmsguwahati.projectrailway.in/Api/get_storeItems";
-
-    public final static String STORING_Image = "http://lmsguwahati.projectrailway.in/Api/upload_signature";
-    private final static String SubmitPenaltyData = "http://lmsguwahati.projectrailway.in/Api/save_storeReceived";
-    ImageView iv_backView,iv_calender;
-    EditText et_date,et_other_places;
+    public final static String STORING_Image = "http://lmskyq.projectrailway.in/Api/upload_signature";
+    private final static String storequestionAPI = "http://lmskyq.projectrailway.in/Api/get_storeItems";
+    private final static String SubmitPenaltyData = "http://lmskyq.projectrailway.in/Api/save_storeReceived";
+    ImageView iv_backView, iv_calender;
+    EditText et_date, et_other_places;
     Button submit;
     ItemReceivedOtherPlacesAdapter adapter;
     RecyclerView recyclerView;
     UserDataModel userdataModel;
     String requestBody;
     String message;
-    QueStoreModel queStoreModel=null;
+    QueStoreModel queStoreModel = null;
     SwipeRefreshLayout srl;
     public JSONArray questionArray;
     final Calendar myCalendar = Calendar.getInstance();

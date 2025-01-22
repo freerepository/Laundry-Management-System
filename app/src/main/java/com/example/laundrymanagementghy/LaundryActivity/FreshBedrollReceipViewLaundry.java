@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,9 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -32,7 +28,6 @@ import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.R;
 import com.example.laundrymanagementghy.model.GetSoiledView;
-import com.example.laundrymanagementghy.model.GetStockView;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 
@@ -42,7 +37,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class FreshBedrollReceipViewLaundry extends AppCompatActivity {
-    private final static String SOILED_VIEW = "http://lmsguwahati.projectrailway.in/api/get_laundry_details_id";
+    private final static String SOILED_VIEW = "http://lmskyq.projectrailway.in/api/get_laundry_details_id";
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
     TextView tv_tittle, tv_empty_data;

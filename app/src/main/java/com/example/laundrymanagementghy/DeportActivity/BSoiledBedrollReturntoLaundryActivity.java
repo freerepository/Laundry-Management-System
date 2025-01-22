@@ -24,9 +24,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -55,8 +52,8 @@ import java.util.Date;
 import java.util.Locale;
 
 public class BSoiledBedrollReturntoLaundryActivity extends AppCompatActivity {
-    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/fresh_bedroll_received_from_laundry";
-    private final static String VRIFY_API = "http://lmsguwahati.projectrailway.in/api/verify_and_train_supply";
+    private final static String BEDROLL_API = "http://lmskyq.projectrailway.in/api/fresh_bedroll_received_from_laundry";
+    private final static String VRIFY_API = "http://lmskyq.projectrailway.in/api/verify_and_train_supply";
 
     ImageView iv_add_supply;
     TextView tv_tittle, tv_empty_data;

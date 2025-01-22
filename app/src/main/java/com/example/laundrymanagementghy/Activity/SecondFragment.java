@@ -3,22 +3,10 @@ package com.example.laundrymanagementghy.Activity;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.UiModeManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
@@ -29,8 +17,6 @@ import android.view.Window;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -38,6 +24,13 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -47,21 +40,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.laundrymanagementghy.Activity.FragmentModel.FragmentModel;
 import com.example.laundrymanagementghy.Activity.FragmentModel.FragmentModel2;
-import com.example.laundrymanagementghy.Activity.FragmentModel.FragmentModel2Deserializer;
-import com.example.laundrymanagementghy.Amodel.SupplyList;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.Bmodel.GetCondemendList;
 import com.example.laundrymanagementghy.DeportActivity.BedrollReturntoLaundrytFromBufferStockActivity;
-import com.example.laundrymanagementghy.DeportActivity.ReceivedFromTrainActivity;
-import com.example.laundrymanagementghy.LaundryActivity.BufferStockIssuetoDepot;
 import com.example.laundrymanagementghy.R;
-
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonSyntaxException;
 
 import org.json.JSONArray;
@@ -69,19 +53,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
 
 public class SecondFragment extends Fragment {
 
-    private final static String BEDROLL_API = "http://lmsguwahati.projectrailway.in/api/clean_bedroll_supply_summary";
-    private final static String GET_DEPOT_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_depots";
+    private final static String BEDROLL_API = "http://lmskyq.projectrailway.in/api/clean_bedroll_supply_summary";
+    private final static String GET_DEPOT_TYPE = "http://lmskyq.projectrailway.in/Api/get_depots";
 
     EditText et_dateFrom, et_dateTo;
     Spinner sp_depot;

@@ -1,21 +1,15 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -26,29 +20,21 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.Bmodel.GetReceiveddailogStoreList;
-import com.example.laundrymanagementghy.Bmodel.ReceivedStoreAdapter;
-import com.example.laundrymanagementghy.DeportActivity.SentCBStoStoreUpdateActivity;
 import com.example.laundrymanagementghy.R;
-import com.example.laundrymanagementghy.model.GetStockModel;
 import com.example.laundrymanagementghy.model.GetStockView;
-import com.example.laundrymanagementghy.resoures.QanswerData;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class BedrollStockViewActivity extends AppCompatActivity {
-    private final static String STOCKDATA_VIEW = "http://lmsguwahati.projectrailway.in/api/getStockDataItems";
+    private final static String STOCKDATA_VIEW = "http://lmskyq.projectrailway.in/api/getStockDataItems";
     RecyclerView recyclerView;
     SwipeRefreshLayout srl;
     TextView tv_tittle, tv_empty_data;

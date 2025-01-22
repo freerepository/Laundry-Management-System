@@ -1,15 +1,8 @@
 package com.example.laundrymanagementghy.DeportActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +12,12 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -40,7 +39,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class DeportDashboard extends AppCompatActivity {
-    public static String Depot_CATEGORY = "http://lmsguwahati.projectrailway.in/Api/get_maincategory";
+    public static String Depot_CATEGORY = "http://lmskyq.projectrailway.in/Api/get_maincategory";
     TextView tv_user_name;
     ImageView vlogout;
     ImageView v_back_button;

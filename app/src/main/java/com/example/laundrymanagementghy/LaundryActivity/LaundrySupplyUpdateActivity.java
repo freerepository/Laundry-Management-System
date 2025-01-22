@@ -1,9 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -29,6 +25,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -38,8 +38,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
 import com.example.laundrymanagementghy.Bmodel.EditSupplyModel;
-import com.example.laundrymanagementghy.model.GetFreshSupplyList;
 import com.example.laundrymanagementghy.R;
+import com.example.laundrymanagementghy.model.GetFreshSupplyList;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -58,18 +58,18 @@ import java.util.List;
 import java.util.Locale;
 
 public class LaundrySupplyUpdateActivity extends AppCompatActivity {
-    private final static String received_laundry_list = "http://lmsguwahati.projectrailway.in/Api/depot_received_from_laundry";
-    private final static String get_depot = "http://lmsguwahati.projectrailway.in/Api/get_depots";
-    private final static String GET_COACH_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_coach";
-    private final static String GET_TRAIN_TYPE = "http://lmsguwahati.projectrailway.in/Api/get_trains";
-    private final static String EDIt_API = "http://lmsguwahati.projectrailway.in/Api/save_supply_to_laundry";
-    ImageView iv_add_supply,ic_calender;
-    String  depot_id="",selectedDepot="",sply_id;
+    private final static String received_laundry_list = "http://lmskyq.projectrailway.in/Api/depot_received_from_laundry";
+    private final static String get_depot = "http://lmskyq.projectrailway.in/Api/get_depots";
+    private final static String GET_COACH_TYPE = "http://lmskyq.projectrailway.in/Api/get_coach";
+    private final static String GET_TRAIN_TYPE = "http://lmskyq.projectrailway.in/Api/get_trains";
+    private final static String EDIt_API = "http://lmskyq.projectrailway.in/Api/save_supply_to_laundry";
+    ImageView iv_add_supply, ic_calender;
+    String depot_id = "", selectedDepot = "", sply_id;
     Spinner sp_depot_id;
     AlertDialog dialog;
-    TextView v_positive,v_negative;
-    EditText et_date,et_select_depot,et_select_train,et_select_coach,et_no_of_bag,et_bed_sheet,et_pillow_cover,
-            et_face_towel,et_blanket_cover,et_bath_towel,et_blanket,et_packet_count,et_remark;
+    TextView v_positive, v_negative;
+    EditText et_date, et_select_depot, et_select_train, et_select_coach, et_no_of_bag, et_bed_sheet, et_pillow_cover,
+            et_face_towel, et_blanket_cover, et_bath_towel, et_blanket, et_packet_count, et_remark;
     final Calendar myCalendar = Calendar.getInstance();
 
     UserDataModel userdataModel;

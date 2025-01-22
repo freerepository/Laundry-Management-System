@@ -1,11 +1,5 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -35,7 +35,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class SupplyCondemnedSBSListActivity extends AppCompatActivity {
-    private final static String get_received_cbs_Api = "http://lmsguwahati.projectrailway.in/Api/get_received_CBSItems";
+    private final static String get_received_cbs_Api = "http://lmskyq.projectrailway.in/Api/get_received_CBSItems";
 
     String  id;
     TextView iv_close;

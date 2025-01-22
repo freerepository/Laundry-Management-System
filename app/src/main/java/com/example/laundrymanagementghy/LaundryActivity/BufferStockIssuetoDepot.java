@@ -1,14 +1,6 @@
 package com.example.laundrymanagementghy.LaundryActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.app.UiModeManager;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,34 +8,28 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.laundrymanagementghy.Amodel.GetBufferIssueList;
-import com.example.laundrymanagementghy.Amodel.GetTestCheckList;
 import com.example.laundrymanagementghy.Amodel.UserDataModel;
-import com.example.laundrymanagementghy.DeportActivity.TestCheckDepotActivity;
 import com.example.laundrymanagementghy.R;
-import com.example.laundrymanagementghy.model.GetStockModel;
-import com.example.laundrymanagementghy.model.GetStockView;
 import com.example.laundrymanagementghy.util.O;
 import com.google.gson.Gson;
 
@@ -58,7 +44,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class BufferStockIssuetoDepot extends AppCompatActivity {
-    private final static String get_Buffer_list_API = "http://lmsguwahati.projectrailway.in/api/getbufferStockData";
+    private final static String get_Buffer_list_API = "http://lmskyq.projectrailway.in/api/getbufferStockData";
     ImageView v_add_buffer;
     TextView tv_empty_data;
     RecyclerView recyclerView;
